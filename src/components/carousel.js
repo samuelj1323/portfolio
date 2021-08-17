@@ -1,7 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
-import { Image, Row, Col, Container } from 'react-bootstrap';
-import profile from '../images/profile.jpeg';
+import { Row, Container } from 'react-bootstrap';
 // Components
 import Break from './break';
 import ProjectCard from './ProjectCard';
@@ -17,6 +16,7 @@ class Carousel extends Component{
                 <ProjectCard
                     projName={card["projName"]}
                     projDet={card["projDet"]}
+                    projLink={card["projLink"]}
                 />
             )
         })
