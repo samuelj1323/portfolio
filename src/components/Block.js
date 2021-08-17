@@ -25,7 +25,7 @@ class Block extends Component{
                             <h1 style={{color:'white', textAlign:'center'}}> {this.props.header}</h1>
                             <h5 style={{color:'white', left:10, textAlign:'center'}} > {this.props.tagline}</h5>
                             <h6 style={{color:'grey', textAlign:'center'}}>Phone: (281) 961-1887</h6>
-                            <h6 style={{color: 'grey', textAlign:'center'}}>   Email:   samuelj1323@gmail.com </h6>
+                            <h6 style={{color: 'grey', textAlign:'center'}}>Email:   samuelj1323@gmail.com </h6>
                         </Row>
                         <Break/>
                     </Container>

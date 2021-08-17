@@ -1,4 +1,4 @@
-import { Component } from "react";
+
 import React from "react";
 
 function Break(){ // Just a break line to mimick Twitter Cards.
