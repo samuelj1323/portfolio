@@ -15,12 +15,12 @@ class Block extends Component{
         if (profPicture) {
             return(
                 <div>
-                    <Container>
-                        <Row className = "justify-content-sm-center">
-                                <Col xs ={12}  md={2}>
-                                    <Image fluid style={{width:150, height:150, justifySelf:'center'}}  src={profile} roundedCircle />
-                                </Col>
+                    
+                    <Container >
+                        <Row className="justify-content-md-center" style={{justifyContent:'center'}}>
+                            <Image style={{width:170, height:150, placeSelf:'center'}}  src={profile} roundedCircle />  
                         </Row>
+                                 
                         <Row>
                             <h1 style={{color:'white', textAlign:'center'}}> {this.props.header}</h1>
                             <h5 style={{color:'white', left:10, textAlign:'center'}} > {this.props.tagline}</h5>
@@ -42,10 +42,8 @@ class Block extends Component{
                         <Col xs={12} md ={4} lg={9}>
                             <h1 style={{color:'white'}}> {this.props.header}</h1>
                             <div style={{height:10}}/>
-                            <h5 style={{color:'white', paddingLeft:40}} > {this.props.tagline}</h5>
+                            <h5 style={{color:'white'}} > {this.props.tagline}</h5>
                         </Col>
-              
-              
                     </Row>
                     <Break/>
                 </Container>
