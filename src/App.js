@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import {Zoom, Fade} from 'react-reveal';
 
 // Component Imports:
 import Block from './components/Block'
@@ -32,7 +33,9 @@ function App() {
         {'projName':'Hello, World', 'projDet': 'Awesome project to show my skills', 'projLink':'abcd'}
         ]}
         />
+        
         <Container>
+        <Zoom>
           <h1 style={{color:'white'}}> Skills</h1>
           <Row>
             <Col>
@@ -48,7 +51,7 @@ function App() {
           <div style={{height:15}}/>
           <Row>
             <Col>
-              <SkillBar skill="SQL" color="green" level={200} />
+              <SkillBar skill="SQL" color="green" level={100} />
             </Col>
             <Col>
               <SkillBar skill="React" color="blue" level={250} />
@@ -57,20 +60,26 @@ function App() {
               <SkillBar skill="React-native" color="blue" level={200}/>
             </Col>
           </Row>
+          <div style={{height:15}}/>
 
           <Row>
             <Col>
+            <div style={{height:50}} />
               <SkillBar skill="Recommender Systems" color="Purple" level={200} />
             </Col>
             <Col>
+            <div style={{height:15}} />
               <SkillBar skill="Algorithms and Datastructures" color="blue" level={250} />
             </Col>
             <Col>
+            <div style={{height:50}} />
               <SkillBar skill="Game Development" color="blue" level={200}/>
             </Col>
           </Row>
+          <div style={{height:15}}/>
           <Row>
             <Col>
+              
               <SkillBar skill="Leadership" color="green" level={200} />
             </Col>
             <Col>
@@ -80,10 +89,35 @@ function App() {
               <SkillBar skill="Full Stack Development" color="blue" level={200}/>
             </Col>
           </Row>
+          <div style={{height:15}}/>
           <Break/>
+          <div style={{height:15}}/>
+          </Zoom>
 
-          <h1>Experience</h1>
+          <Fade>
+          <h1 style={{color:'white'}}>Experience</h1> {/** Here I will show all the companies I've worked for and talk to what I've done for them. */}
+          <Block profPicture={false} header="comp. 1" tagline="I did all this."/>
+          <Block profPicture={false} header="comp.2" />
+          <Block profPicture={false} header="comp 3"/>
+
+          </Fade>
+          {/** I want to leave a downloadable resume here */}
+          {/** I want a text box that has a header that states 
+           * Send me an email.
+           * Tag line that says
+           * All liked projects will be shown to me to let me know what interests you most.
+           * 
+           * Then I want a button to send me an email.
+           * 
+           * 
+           * On Email sent I want a toast that appears stating that an email was sent.
+           */}
+
+          
         </Container>
+
+        
+        
         
       
       
