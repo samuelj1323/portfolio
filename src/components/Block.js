@@ -39,7 +39,7 @@ class Block extends Component{
                 <Container>
                     <Row xs={2} sm={2}>
     
-                        <Col xs={12} md ={4} lg={9}>
+                        <Col xs={12} md ={4} lg={12}>
                             <h1 style={{color:'white'}}> {this.props.header}</h1>
                             <div style={{height:10}}/>
                             <h5 style={{color:'white'}} > {this.props.tagline}</h5>
