@@ -24,13 +24,13 @@ function App() {
       <div style={{height:15}}/>
       <Carousel cards={[
         {'projName':'By The Cover', 'projDet': 'Recommender System based off of cover art from TMDB database and Movie Album from Spotify data.', 'projLink':'https://github.com/samuelj1323/By_The_Cover'},
-        {'projName':'Project Pabu', 'projDet': 'Stock market portoflio evaluation from sentiment analysis from twitter data.', 'projLink':'abcd'},
-        {'projName':'Chaos in the Genome', 'projDet': 'Awesome project to show my skills', 'projLink':'abcd'},
-        {'projName':'Hello, World', 'projDet': 'Awesome project to show my skills', 'projLink':'abcd'},
-        {'projName':'Hello, World', 'projDet': 'Awesome project to show my skills', 'projLink':'abcd'},
-        {'projName':'Hello, World', 'projDet': 'Awesome project to show my skills', 'projLink':'abcd'},
-        {'projName':'Hello, World', 'projDet': 'Awesome project to show my skills', 'projLink':'abcd'},
-        {'projName':'Hello, World', 'projDet': 'Awesome project to show my skills', 'projLink':'abcd'}
+        {'projName':'Project Pabu', 'projDet': 'Stock market portoflio evaluation from sentiment analysis from twitter data.', 'projLink':'https://github.com/samuelj1323/projectPabu'},
+        {'projName':'Genome Evolution', 'projDet': 'Game to show a cells behavior over the course of its life.', 'projLink':'https://github.com/zachadel/GenomeEvolution'},
+        {'projName':'Prayer Library', 'projDet': 'Library to hold prayers and Bible search tool to find verses', 'projLink':'https://github.com/samuelj1323/PLib'},
+        {'projName':'Quick Silver', 'projDet': 'Automation of the onboarding new clients process at Apex Clearing.'},
+        {'projName':'Queue Scheduler', 'projDet': 'Daily Schedule creation with the Queue Data strcuture.', 'projLink':'https://github.com/samuelj1323/QueueSchedule'},
+        {'projName':'Business Database', 'projDet':'Database frontend in java for the business school', 'projLink': 'https://github.com/samuelj1323/business_database'},
+        {'projName':'Andon App', 'projDet': 'Cross platform mobile application to assist in the submission of quotes for Andon Specialties', 'projLink':'https://github.com/samuelj1323/IndustrialApp'}
         ]}
         />
         
