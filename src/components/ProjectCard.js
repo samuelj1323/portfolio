@@ -37,15 +37,19 @@ class ProjectCard extends Component{
                 <Row>
                     <Col>
                         <div
-                            style={{minWidth: 240, minHeight: 360, maxHeight:360, maxWidth:240, backgroundColor: '#0084B4', borderRadius:15, margin:10}}
+                            style={{minWidth: 280, minHeight: 360, maxHeight:360, maxWidth:300, backgroundColor: '#0084B4', borderRadius:15, margin:10}}
                         >
-                            <h2 style={{color:'white', textAlign:'center'}}>{this.props.projName}</h2>
-                            <h6 style={{color: 'white', textAlign: 'center'}}>{this.props.projDet}</h6>
-                            <div style={{maxHeight: 200, minHeight:160}}></div>
+                            <br/>
+                            <h2 style={{color:'white',justifySelf:'center' ,textAlign:'center'}}>{this.props.projName}</h2>
+                            
+                            <div style={{height:200, minHeight:170, justifyContent:'center', textAlign:'center'}}>
+                                <a style={{color:'white', textAlign:'center'}} target="_blank" href={this.props.projLink} > Github  </a>
 
-                            <div>
+                            </div>
+
+                            <div style={{bottom:0}}>
                                 
-                                    <Row style={{paddingLeft:50}}>
+                                    <Row style={{paddingLeft:75}}>
                                         <Button style={{width:65, height:65, justifyItems:'center'}} variant="outline-light" onClick={this.showDetails} >
                                             <Image width={40} src ={details}>
 
@@ -67,9 +71,9 @@ class ProjectCard extends Component{
                     </Col>
                     <Col>
                         
-                        {this.state.showMessage && <a style={{color:'white'}} href={this.props.projLink}>
-                            Github Link
-                        </a>}
+                        {this.state.showMessage  &&
+                        <h5 style={{color:'white'}}> {this.props.projDet} </h5>
+                        }
                     
                     {/** I want to add a feature here where text pops up on clicking to show the information for the project. */}
                     
