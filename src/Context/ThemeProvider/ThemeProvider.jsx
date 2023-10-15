@@ -5,10 +5,10 @@ export const ThemeContext = React.createContext();
 export const themes = {
   colors: {
     primaryDark: "#393D3F",
-    primaryLight: "#FDFDFF",
+    primaryLight: "#FFFFFF",
     secondary: "#62929E",
     tertiary: "#546A7B",
-    accent: "#F7D002",
+    accent: "#FF9900",
   },
 };
 
