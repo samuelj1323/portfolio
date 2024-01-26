@@ -1,13 +1,40 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "the-seasons";
+  src: url("./fonts//theseasonsBetter.woff");
+}
+.image-container {
+  width: 100%; /* or any other size */
+  height: auto; /* maintain aspect ratio */
+  clip-path: ellipse(25% 45% at 36% 45%); /* example of an oblong shape */
+  rotate: 30deg;
+}
+.oval-image img {
+  transform: rotate(-30deg);
+}
+.sub-blurb {
+  background-color: inherit;
+  border-color: white;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.image-vert-container {
+  width: 100%; /* or any other size */
+  height: auto; /* maintain aspect ratio */
+  clip-path: ellipse(30% 45% at 40% 50%);
 }

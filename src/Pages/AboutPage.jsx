@@ -1,11 +1,9 @@
 import React from "react";
 import { ThemeContext } from "../Context/ThemeProvider/ThemeProvider";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { Grid, Stack, Typography, Container } from "@mui/material";
+import { Grid, Stack, Typography, Container, Divider } from "@mui/material";
 import HeadShot from "../assets/headshot_rect.png";
-const LandingPage = () => {
+const AboutPage = () => {
   const { theme } = React.useContext(ThemeContext);
-  const matches = useMediaQuery("(max-width:900px)");
   return (
     <>
       <Stack
@@ -15,9 +13,6 @@ const LandingPage = () => {
           flex: 1,
         }}
       >
-        {matches && (
-          <Typography style={{ color: "white" }}>Hello world</Typography>
-        )}
         <div
           style={{
             alignContent: "center",
@@ -27,7 +22,7 @@ const LandingPage = () => {
         >
           <Container>
             <Grid container spacing={3} style={{ paddingTop: "100px" }}>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={7}>
                 <Typography
                   style={{
                     color: "White",
@@ -38,7 +33,7 @@ const LandingPage = () => {
                   }}
                   variant="h3"
                 >
-                  Welcome to My Portfolio
+                  Who is Sam?
                 </Typography>
                 <Grid
                   container
@@ -52,22 +47,28 @@ const LandingPage = () => {
                 <div
                   variant="outlined"
                   style={{
-                    border: true,
                     color: "white",
-                    borderWidth: "1px",
-                    borderStyle: "solid",
                     padding: "5px",
-                    borderRadius: "15px",
-                    display: "inline-block",
                   }}
                 >
                   <Typography variant="h5">
-                    Samuel Mahan / Software Engineer
+                    I'm a Software Engineer with 2 years of experience and a BS
+                    in Computer Science. Today I am a frontend engineer at JP
+                    Morgan Chase & Co.
                   </Typography>
+                  <div
+                    style={{
+                      width: "60%",
+                      height: 4,
+                      marginTop: "30px",
+                      backgroundColor: "white",
+                      radius: 2,
+                    }}
+                  />
                 </div>
               </Grid>
               <Grid
-                md={6}
+                md={5}
                 xs={12}
                 style={{
                   display: "flex",
@@ -75,17 +76,13 @@ const LandingPage = () => {
                   alignItems: "center", // Vertical centering
                 }}
               >
-                {!matches && (
-                  <div className="image-container">
-                    <div className="oval-image">
-                      <img
-                        style={{ width: 500 }}
-                        src={HeadShot}
-                        alt="Description of the image"
-                      />
-                    </div>
-                  </div>
-                )}
+                <div className="image-vert-container">
+                  <img
+                    style={{ width: 500 }}
+                    src={HeadShot}
+                    alt="Description of the image"
+                  />
+                </div>
               </Grid>
             </Grid>
           </Container>
@@ -95,4 +92,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default AboutPage;
