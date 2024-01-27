@@ -1,5 +1,14 @@
 import React from "react";
-import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
+import {
+  Grid,
+  Stack,
+  Typography,
+  Container,
+  useTheme,
+  CardContent,
+  Card,
+} from "@mui/material";
+import Carousel from "../Components/Carousel/Carousel";
 const BackgroundPage = () => {
   const theme = useTheme();
 
@@ -100,6 +109,34 @@ const BackgroundPage = () => {
       </div>
     );
   };
+
+  const technologies = [
+    "React",
+    "Jenkins",
+    "Python",
+    "Module Federation",
+    "Webpack 5",
+    "Typescript",
+    "AWS",
+    "Javscript",
+    "Git",
+    "Bitbucket",
+    "Github",
+    "Jest Testing",
+    "Godot",
+  ];
+  const concepts = [
+    "Front-end development",
+    "Version control",
+    "Deep learning",
+    "Agile",
+    "DOM",
+    "Microfrontend Development",
+    "Data Structures",
+    "Algorithms",
+  ];
+
+  const skills = ["Ownership", "Leadership"];
   return (
     <>
       <Stack
@@ -146,6 +183,16 @@ const BackgroundPage = () => {
 
                 <Education />
                 <WorkHistory />
+                <Typography variant="h5">Technologies:</Typography>
+                <Carousel items={technologies} />
+                <br />
+                <br />
+                <Typography variant="h5">Concepts:</Typography>
+                <Carousel items={concepts} />
+                <br />
+                <br />
+                <Typography variant="h5">Skills:</Typography>
+                <Carousel items={skills} />
               </Grid>
             </Grid>
           </Container>
