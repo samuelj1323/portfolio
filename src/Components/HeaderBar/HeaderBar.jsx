@@ -4,17 +4,18 @@ import {
   Toolbar,
   Typography,
   Button,
+  useTheme,
   ButtonGroup,
   useMediaQuery,
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 
 const HeaderBar = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const appBarStyle = {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: theme.palette.background.default,
     boxShadow: "none",
+    color: theme.palette.text.primary,
     borderBottom: "0", // Explicitly remove any borders
   };
 
@@ -25,9 +26,9 @@ const HeaderBar = () => {
     borderBottom: "0", // Explicitly remove any borders
   };
   const buttonStyle = {
-    color: "black",
+    color: "white",
     "&:hover": {
-      backgroundColor: "#yellow",
+      backgroundColor: "#white",
     },
   };
 
@@ -41,18 +42,26 @@ const HeaderBar = () => {
       >
         <Toolbar style={toolbarStyle} variant="dense">
           {!isSmallScreen && (
-            <Typography variant="h6" style={{ flexGrow: 1 }}>
+            <Typography
+              variant="h3"
+              style={{ flexGrow: 1, fontFamily: "the-seasons" }}
+            >
               Samuel Mahan
             </Typography>
           )}
 
           {isSmallScreen ? (
-            <div style={{ textAlign: "center", width: "100%" }}>
-              <Typography variant="h6">Sam Mahan</Typography>
+            <div style={{ textAlign: "center", width: "100%", color: "white" }}>
               <ButtonGroup
                 variant="text"
                 orientation="vertical"
-                style={{ marginTop: 10 }}
+                color="error"
+                style={{
+                  marginTop: 10,
+                  color: theme.colors.primaryLight,
+                  textDecorationColor: theme.colors.primaryLight,
+                  backgroundColor: "white",
+                }}
               >
                 <Button style={buttonStyle} onClick={() => {}}>
                   About

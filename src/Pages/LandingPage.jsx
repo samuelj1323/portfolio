@@ -1,16 +1,15 @@
 import React from "react";
-import { ThemeContext } from "../Context/ThemeProvider/ThemeProvider";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Grid, Stack, Typography, Container } from "@mui/material";
-import HeadShot from "../assets/headshot_rect.png";
+import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
+import HeadShot from "../assets/current_headshot.png";
 const LandingPage = () => {
-  const { theme } = React.useContext(ThemeContext);
+  const theme = useTheme();
   const matches = useMediaQuery("(max-width:900px)");
   return (
     <>
       <Stack
         style={{
-          backgroundColor: theme.colors.primaryDark,
+          backgroundColor: theme.palette.background.default,
           display: "flex",
           flex: 1,
         }}

@@ -2,12 +2,16 @@ import React from "react";
 import LandingPage from "./Pages/LandingPage";
 import HeaderBar from "./Components/HeaderBar";
 import AboutPage from "./Pages/AboutPage";
-import ThemeProvider from "./Context/ThemeProvider/ThemeProvider";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme/theme";
+import BackgroundPage from "./Pages/BackgroundPage";
 const App = () => {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <HeaderBar />
       <LandingPage />
       <AboutPage />
+      {/* <BackgroundPage /> */}
     </ThemeProvider>
   );
 };

@@ -1,14 +1,13 @@
 import React from "react";
-import { ThemeContext } from "../Context/ThemeProvider/ThemeProvider";
-import { Grid, Stack, Typography, Container, Divider } from "@mui/material";
+import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
 import HeadShot from "../assets/headshot_rect.png";
 const AboutPage = () => {
-  const { theme } = React.useContext(ThemeContext);
+  const theme = useTheme();
   return (
     <>
       <Stack
         style={{
-          backgroundColor: theme.colors.primaryDark,
+          backgroundColor: theme.palette.background.default,
           display: "flex",
           flex: 1,
         }}
@@ -21,7 +20,7 @@ const AboutPage = () => {
           }}
         >
           <Container>
-            <Grid container spacing={3} style={{ paddingTop: "100px" }}>
+            <Grid container spacing={3}>
               <Grid item xs={12} md={7}>
                 <Typography
                   style={{
@@ -47,7 +46,7 @@ const AboutPage = () => {
                 <div
                   variant="outlined"
                   style={{
-                    color: "white",
+                    color: "whitesmoke",
                     padding: "5px",
                   }}
                 >
