@@ -63,3 +63,17 @@ code {
   height: auto; /* maintain aspect ratio */
   clip-path: ellipse(40% 45% at 60% 50%);
 }
+
+.dome-card {
+  display: flex;
+  background-color: white;
+  border-top-right-radius: 40%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 15px;
+  text-align: center;
+  border-top-left-radius: 40%;
+  width: 200px;
+  height: 200px;
+}

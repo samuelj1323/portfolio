@@ -5,6 +5,7 @@ import AboutPage from "./Pages/AboutPage";
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme/theme";
 import BackgroundPage from "./Pages/BackgroundPage";
+import ProjectsPage from "./Pages/Projects";
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -12,6 +13,7 @@ const App = () => {
       <LandingPage />
       <AboutPage />
       <BackgroundPage />
+      <ProjectsPage />
     </ThemeProvider>
   );
 };

@@ -134,6 +134,7 @@ const BackgroundPage = () => {
     "Microfrontend Development",
     "Data Structures",
     "Algorithms",
+    "Content Management Services",
   ];
 
   const skills = ["Ownership", "Leadership"];
