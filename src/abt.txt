@@ -1,6 +1,0 @@
-
-I am a Senior Computer Science major at Texas A&M University. I grew up in Houston Texas, and will always appreciate a great cup of coffee!
-
-Through exploring different projects, teams, and development cycles I've been exposed to a diverse range of project types. 
-      My next step is exploring Full Stack Development. Over the last 3 years I've been exposed to Front End work, Back End work, Machine Learning, and Game Development.
-      Among my professional goals, I aim to build out my skills in the front and back end in order to be a Full Stack Software Engineer.
