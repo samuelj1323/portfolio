@@ -1,14 +1,12 @@
 import React from "react";
-import { ThemeContext } from "../theme/theme";
-import { Grid, Stack, Typography, Container, Divider } from "@mui/material";
-import HeadShot from "../assets/headshot_rect.png";
+import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
 const BackgroundPage = () => {
-  const { theme } = React.useContext(ThemeContext);
+  const theme = useTheme();
   return (
     <>
       <Stack
         style={{
-          backgroundColor: theme.colors.primaryDark,
+          backgroundColor: theme.palette.background.default,
           display: "flex",
           flex: 1,
         }}
@@ -26,7 +24,7 @@ const BackgroundPage = () => {
               <Grid item xs={12} md={7}>
                 <Typography
                   style={{
-                    color: "White",
+                    color: theme.palette.text.primary,
                     fontSize: "75px",
                     fontWeight: 800,
                     fontFamily: "the-seasons",
@@ -48,7 +46,7 @@ const BackgroundPage = () => {
                 <div
                   variant="outlined"
                   style={{
-                    color: "grey",
+                    color: theme.palette.text.primary,
                     padding: "5px",
                   }}
                 >

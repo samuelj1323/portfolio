@@ -4,12 +4,30 @@ import { createTheme } from "@mui/material";
 export const ThemeContext = React.createContext();
 
 const theme = createTheme({
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        contained: {
+          backgroundColor: "#F5EDDA",
+          color: "#000000",
+          border: "1px solid black",
+          borderRadius: 15,
+          boxShadow: "none",
+          "&:hover": {
+            backgroundColor: "#000000", // Replace with your desired hover color
+            color: "white",
+            boxShadow: "none",
+          },
+        },
+      },
+    },
+  },
   palette: {
     background: {
-      default: "#000000",
+      default: "#F5EDDA",
     },
     text: {
-      primary: "#FFFFFF",
+      primary: "#000000",
       fontFamily: "the-seasons",
     },
     primary: {

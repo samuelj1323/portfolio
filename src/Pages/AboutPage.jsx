@@ -1,8 +1,16 @@
 import React from "react";
-import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
+import {
+  Grid,
+  Stack,
+  Typography,
+  Container,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import HeadShot from "../assets/headshot_rect.png";
 const AboutPage = () => {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <>
       <Stack
@@ -17,6 +25,7 @@ const AboutPage = () => {
             alignContent: "center",
             justifyContent: "center",
             height: "100vh",
+            width: "auto",
           }}
         >
           <Container>
@@ -24,7 +33,7 @@ const AboutPage = () => {
               <Grid item xs={12} md={7}>
                 <Typography
                   style={{
-                    color: "White",
+                    color: theme.palette.text.primary,
                     fontSize: "75px",
                     fontWeight: 800,
                     fontFamily: "the-seasons",
@@ -46,7 +55,7 @@ const AboutPage = () => {
                 <div
                   variant="outlined"
                   style={{
-                    color: "whitesmoke",
+                    color: theme.palette.text.primary,
                     padding: "5px",
                   }}
                 >
@@ -60,7 +69,7 @@ const AboutPage = () => {
                       width: "60%",
                       height: 4,
                       marginTop: "30px",
-                      backgroundColor: "white",
+                      backgroundColor: theme.palette.text.primary,
                       radius: 2,
                     }}
                   />
@@ -75,13 +84,15 @@ const AboutPage = () => {
                   alignItems: "center", // Vertical centering
                 }}
               >
-                <div className="image-vert-container">
-                  <img
-                    style={{ width: 500 }}
-                    src={HeadShot}
-                    alt="Description of the image"
-                  />
-                </div>
+                {!isSmallScreen && (
+                  <div className="image-vert-container">
+                    <img
+                      style={{ width: 500, height: "auto" }}
+                      src={HeadShot}
+                      alt="Hands typing"
+                    />
+                  </div>
+                )}
               </Grid>
             </Grid>
           </Container>

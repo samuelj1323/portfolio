@@ -17,10 +17,35 @@ code {
   src: url("./fonts//theseasonsBetter.woff");
 }
 .image-container {
-  width: 100%; /* or any other size */
-  height: auto; /* maintain aspect ratio */
-  clip-path: ellipse(25% 45% at 36% 45%); /* example of an oblong shape */
-  rotate: 30deg;
+  width: 200px; /* or any other size */
+  height: 200px; /* maintain aspect ratio */
+  position: relative;
+}
+.image-container img {
+  position: absolute;
+  width: 120%;
+  left: -10%;
+  top: -50%;
+  z-index: 10;
+}
+.circle-container {
+  width: 280px; /* Diameter of the circle */
+  height: 300px; /* Diameter of the circle */
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  overflow: hidden; /* Hides the overflow part of the image */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-shadow: 10%;
+  align-items: center; /* Optional: if you want a border around the circle */
+}
+.headshot {
+  position: absolute;
+  width: auto; /* Maintain aspect ratio */
+  height: 120%; /* Height greater than the container to create the popping-out effect */
+  z-index: 10;
+  top: -20px;
 }
 .oval-image img {
   transform: rotate(-30deg);

@@ -11,7 +11,7 @@ const App = () => {
       <HeaderBar />
       <LandingPage />
       <AboutPage />
-      {/* <BackgroundPage /> */}
+      <BackgroundPage />
     </ThemeProvider>
   );
 };

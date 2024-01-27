@@ -1,10 +1,17 @@
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
+import {
+  Grid,
+  Stack,
+  Typography,
+  Container,
+  useTheme,
+  Button,
+} from "@mui/material";
 import HeadShot from "../assets/current_headshot.png";
 const LandingPage = () => {
   const theme = useTheme();
-  const matches = useMediaQuery("(max-width:900px)");
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <>
       <Stack
@@ -14,22 +21,20 @@ const LandingPage = () => {
           flex: 1,
         }}
       >
-        {matches && (
-          <Typography style={{ color: "white" }}>Hello world</Typography>
-        )}
         <div
           style={{
             alignContent: "center",
             justifyContent: "center",
             height: "100vh",
+            width: "auto",
           }}
         >
           <Container>
-            <Grid container spacing={3} style={{ paddingTop: "100px" }}>
-              <Grid item xs={12} md={6}>
+            <Grid container spacing={3} style={{ paddingTop: "150px" }}>
+              <Grid item xs={12} md={8}>
                 <Typography
                   style={{
-                    color: "White",
+                    color: theme.palette.text.primary,
                     fontSize: "75px",
                     fontWeight: 800,
                     fontFamily: "the-seasons",
@@ -42,31 +47,25 @@ const LandingPage = () => {
                 <Grid
                   container
                   style={{
-                    paddingTop: 20,
-                    paddingLeft: 20,
-                    paddingBottom: 80,
+                    display: "flex",
+                    flex: 1,
+                    paddingTop: 50,
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignContent: "center",
                   }}
                   spacing={2}
-                />
-                <div
-                  variant="outlined"
-                  style={{
-                    border: true,
-                    color: "white",
-                    borderWidth: "1px",
-                    borderStyle: "solid",
-                    padding: "5px",
-                    borderRadius: "15px",
-                    display: "inline-block",
-                  }}
                 >
-                  <Typography variant="h5">
-                    Samuel Mahan / Software Engineer
-                  </Typography>
-                </div>
+                  <Button
+                    sx={{ width: 200, height: 40, textTransform: "none" }}
+                    variant="contained"
+                  >
+                    Let's Chat
+                  </Button>
+                </Grid>
               </Grid>
               <Grid
-                md={6}
+                md={4}
                 xs={12}
                 style={{
                   display: "flex",
@@ -74,15 +73,13 @@ const LandingPage = () => {
                   alignItems: "center", // Vertical centering
                 }}
               >
-                {!matches && (
-                  <div className="image-container">
-                    <div className="oval-image">
-                      <img
-                        style={{ width: 500 }}
-                        src={HeadShot}
-                        alt="Description of the image"
-                      />
-                    </div>
+                {!isSmallScreen && (
+                  <div className="circle-container">
+                    <img
+                      src={HeadShot}
+                      alt="Sam's headshot"
+                      className="headshot"
+                    />
                   </div>
                 )}
               </Grid>

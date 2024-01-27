@@ -21,12 +21,13 @@ const HeaderBar = () => {
 
   const toolbarStyle = {
     padding: "4px 16px",
+    width: "auto",
     minHeight: "auto",
     boxShadow: "none", // Ensure no box shadow here either
     borderBottom: "0", // Explicitly remove any borders
   };
   const buttonStyle = {
-    color: "white",
+    color: theme.palette.text.primary,
     "&:hover": {
       backgroundColor: "#white",
     },
@@ -41,43 +42,14 @@ const HeaderBar = () => {
         color="default"
       >
         <Toolbar style={toolbarStyle} variant="dense">
-          {!isSmallScreen && (
-            <Typography
-              variant="h3"
-              style={{ flexGrow: 1, fontFamily: "the-seasons" }}
-            >
-              Samuel Mahan
-            </Typography>
-          )}
+          <Typography
+            variant="h3"
+            style={{ flexGrow: 1, fontFamily: "the-seasons" }}
+          >
+            Samuel Mahan
+          </Typography>
 
-          {isSmallScreen ? (
-            <div style={{ textAlign: "center", width: "100%", color: "white" }}>
-              <ButtonGroup
-                variant="text"
-                orientation="vertical"
-                color="error"
-                style={{
-                  marginTop: 10,
-                  color: theme.colors.primaryLight,
-                  textDecorationColor: theme.colors.primaryLight,
-                  backgroundColor: "white",
-                }}
-              >
-                <Button style={buttonStyle} onClick={() => {}}>
-                  About
-                </Button>
-                <Button style={buttonStyle} onClick={() => {}}>
-                  Experience
-                </Button>
-                <Button style={buttonStyle} onClick={() => {}}>
-                  Project
-                </Button>
-                <Button style={buttonStyle} onClick={() => {}}>
-                  Contact
-                </Button>
-              </ButtonGroup>
-            </div>
-          ) : (
+          {!isSmallScreen && (
             <ButtonGroup variant="text">
               <Button style={buttonStyle} onClick={() => {}}>
                 About
