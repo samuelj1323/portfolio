@@ -28,6 +28,8 @@ const HeaderBar = () => {
   };
   const buttonStyle = {
     color: theme.palette.text.primary,
+    textTransform: "none",
+    fontSize: 17,
     "&:hover": {
       backgroundColor: "#white",
     },
@@ -51,16 +53,44 @@ const HeaderBar = () => {
 
           {!isSmallScreen && (
             <ButtonGroup variant="text">
-              <Button style={buttonStyle} onClick={() => {}}>
+              <Button
+                style={buttonStyle}
+                onClick={() => {
+                  document
+                    .getElementById("about")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 About
               </Button>
-              <Button style={buttonStyle} onClick={() => {}}>
-                Experience
+              <Button
+                style={buttonStyle}
+                onClick={() => {
+                  document
+                    .getElementById("my-background")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Background
               </Button>
-              <Button style={buttonStyle} onClick={() => {}}>
-                Project
+              <Button
+                style={buttonStyle}
+                onClick={() => {
+                  document
+                    .getElementById("projects")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Projects
               </Button>
-              <Button style={buttonStyle} onClick={() => {}}>
+              <Button
+                style={buttonStyle}
+                onClick={() => {
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 Contact
               </Button>
             </ButtonGroup>

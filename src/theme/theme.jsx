@@ -12,6 +12,7 @@ const theme = createTheme({
           color: "#000000",
           border: "1px solid black",
           borderRadius: 15,
+          fontSize: 17,
           boxShadow: "none",
           "&:hover": {
             backgroundColor: "#000000", // Replace with your desired hover color

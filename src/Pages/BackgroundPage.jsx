@@ -2,9 +2,23 @@ import React from "react";
 import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
 const BackgroundPage = () => {
   const theme = useTheme();
+
+  const Education = () => {};
+
+  const WorkHistory = () => {
+    return (
+      <div>
+        <Typography>Work History: </Typography>
+        <ul>
+          <li>JP Morgan Chase & Co.</li>
+        </ul>
+      </div>
+    );
+  };
   return (
     <>
       <Stack
+        id="my-background"
         style={{
           backgroundColor: theme.palette.background.default,
           display: "flex",
