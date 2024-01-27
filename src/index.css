@@ -61,5 +61,5 @@ code {
 .image-vert-container {
   width: 100%; /* or any other size */
   height: auto; /* maintain aspect ratio */
-  clip-path: ellipse(30% 45% at 40% 50%);
+  clip-path: ellipse(40% 45% at 60% 50%);
 }

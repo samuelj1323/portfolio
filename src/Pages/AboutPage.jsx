@@ -31,7 +31,7 @@ const AboutPage = () => {
         >
           <Container>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={7}>
+              <Grid item xs={12} md={8}>
                 <Typography
                   style={{
                     color: theme.palette.text.primary,
@@ -77,7 +77,7 @@ const AboutPage = () => {
                 </div>
               </Grid>
               <Grid
-                md={5}
+                md={4}
                 xs={12}
                 style={{
                   display: "flex",
