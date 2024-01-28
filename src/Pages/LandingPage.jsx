@@ -57,6 +57,11 @@ const LandingPage = () => {
                   spacing={2}
                 >
                   <Button
+                    onClick={() =>
+                      document
+                        .getElementById("contact")
+                        .scrollIntoView({ behavior: "smooth" })
+                    }
                     sx={{ width: 200, height: 40, textTransform: "none" }}
                     variant="contained"
                   >
