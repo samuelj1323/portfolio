@@ -23,8 +23,15 @@ const Carousel = ({ items }) => {
       }}
     >
       {items.map((item, index) => (
-        <Card sx={{ minWidth: 200, m: 1 }} key={index}>
-          <CardContent>
+        <Card sx={{ minWidth: 200, m: 1, textAlign: "center" }} key={index}>
+          <CardContent
+            sx={{
+              textAlign: "center",
+              flex: 1,
+              display: "flex",
+              alignContent: "center",
+            }}
+          >
             <Typography variant="h5">{item}</Typography>
           </CardContent>
         </Card>

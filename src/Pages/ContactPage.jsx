@@ -29,7 +29,7 @@ const ContactPage = () => {
     {
       type: "link",
       label: "LinkedIn",
-      link: "https://www.linkedin.com/in/sam-m-59b9b9145/",
+      link: "https://www.linkedin.com/in/sam-m-59b9b9145",
     },
   ];
   const theme = useTheme();
@@ -38,29 +38,30 @@ const ContactPage = () => {
 
   const EnumerateContactCards = () => {
     return contactArr.map((item) => {
-      if (item.type === "email") {
-        return (
-          <Card>
-            <Typography>
-              Email:{" "}
-              <Link
-                to="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = item.link;
-                }}
-                sx={{ color: "brown" }}
-              >
-                item.
-              </Link>
-            </Typography>
-          </Card>
-        );
-      } else if (item.type === "phone") {
-      } else if (item.type === "link") {
-      } else {
-        return;
-      }
+      return (
+        <Card
+          sx={{
+            padding: 5,
+            marginTop: 5,
+            textAlign: "center",
+            maxWidth: "40%",
+            minWidth: 400,
+            alignSelf: "center",
+          }}
+        >
+          <Typography>
+            <Link
+              target="_blank"
+              rel="noopener"
+              to="#"
+              href={item.link}
+              sx={{ color: "brown" }}
+            >
+              {item.label}
+            </Link>
+          </Typography>
+        </Card>
+      );
     });
   };
   return (
@@ -74,125 +75,20 @@ const ContactPage = () => {
       id="contact"
     >
       <Container>
-        <Grid container>
-          <Typography
-            style={{
-              color: theme.palette.text.primary,
-              fontSize: "75px",
-              fontWeight: 800,
-              fontFamily: "the-seasons",
-              wordWrap: "break-word",
-            }}
-            variant="h3"
-          >
-            Let's chat...
-          </Typography>
-          <Grid
-            item
-            xs={12}
-            style={{ flex: 1, display: "flex", justifyContent: "center" }}
-          >
-            <Stack style={{ width: "100%" }}>
-              <Card
-                style={{
-                  backgroundColor: theme.palette.background.paper,
-                  flex: 1,
-                  maxWidth: 600,
-                  marginTop: 50,
-                  borderRadius: 15,
-                  padding: 10,
-                }}
-              >
-                <Grid container>
-                  <Grid item xs={8}>
-                    <Typography>Email: </Typography>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Link
-                      to="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href = "mailto:samuelj1323@gmail.com";
-                      }}
-                      sx={{ color: "brown" }}
-                    >
-                      samuelj1323@gmail.com
-                    </Link>
-                  </Grid>
-                </Grid>
-              </Card>
-              <Card
-                style={{
-                  backgroundColor: theme.palette.background.paper,
-                  flex: 1,
-                  maxWidth: 600,
-                  marginTop: 50,
-                  borderRadius: 15,
-                  padding: 10,
-                }}
-              >
-                <Grid container>
-                  <Grid item xs={8}>
-                    <Typography>Phone: </Typography>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Link
-                      to="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href = "tel:2819611887";
-                      }}
-                      sx={{ color: "brown" }}
-                    >
-                      281-961-1887
-                    </Link>
-                  </Grid>
-                </Grid>
-              </Card>
-
-              <Card
-                style={{
-                  backgroundColor: theme.palette.background.paper,
-                  flex: 1,
-                  maxWidth: 600,
-                  marginTop: 50,
-                  borderRadius: 15,
-                  padding: 10,
-                }}
-              >
-                <Grid container>
-                  <Grid item xs={12}>
-                    <Link
-                      to="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href =
-                          "https://www.linkedin.com/in/sam-m-59b9b9145/";
-                      }}
-                      sx={{ color: "brown" }}
-                    >
-                      LinkedIn
-                    </Link>
-                    <Grid item xs={12}>
-                      <Link
-                        to="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          window.location.href =
-                            "https://github.com/samuelj1323";
-                        }}
-                        sx={{ color: "brown" }}
-                      >
-                        Github
-                      </Link>
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Card>
-            </Stack>
-          </Grid>
-        </Grid>
+        <Typography
+          style={{
+            color: theme.palette.text.primary,
+            fontSize: "75px",
+            fontWeight: 800,
+            fontFamily: "the-seasons",
+            wordWrap: "break-word",
+          }}
+          variant="h3"
+        >
+          Let's chat...
+        </Typography>
       </Container>
+      <EnumerateContactCards />
     </Stack>
   );
 };
