@@ -1,12 +1,5 @@
-import React, { useState } from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  Button,
-  Box,
-  Grid,
-} from "@mui/material";
+import React from "react";
+import { Card, CardContent, Typography, Box } from "@mui/material";
 
 const Carousel = ({ items }) => {
   return (

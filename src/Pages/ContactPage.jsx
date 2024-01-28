@@ -1,6 +1,5 @@
 import {
   Stack,
-  Grid,
   Container,
   Typography,
   useTheme,

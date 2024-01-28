@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Grid,
-  Stack,
-  Typography,
-  Container,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
-import HeadShot from "../assets/headshot_rect.png";
+import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
 import CarouselOfDomes from "../Components/CarouselOfDomes/CarouselOfDomes";
 const ProjectsPage = () => {
   const projects = [
@@ -38,7 +30,6 @@ const ProjectsPage = () => {
     },
   ];
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <>
       <Stack
