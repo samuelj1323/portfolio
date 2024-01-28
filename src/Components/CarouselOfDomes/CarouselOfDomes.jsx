@@ -1,8 +1,9 @@
 import React from "react";
-import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Button, Link, Stack, Typography, useTheme } from "@mui/material";
 
 const CarouselOfDomes = ({ items }) => {
   const [description, setDescription] = React.useState("");
+  const [link, setLink] = React.useState("");
   const theme = useTheme();
   return (
     <Stack>
@@ -30,6 +31,7 @@ const CarouselOfDomes = ({ items }) => {
               <Button
                 onClick={() => {
                   setDescription(item.description);
+                  setLink(item.link);
                 }}
               >
                 Details
@@ -57,6 +59,9 @@ const CarouselOfDomes = ({ items }) => {
             }}
           >
             <Typography>{description}</Typography>
+            <Link target="_blank" rel="noopener" href={link}>
+              Link
+            </Link>
           </div>
         </div>
       )}
