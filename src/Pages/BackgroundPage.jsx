@@ -137,7 +137,19 @@ const BackgroundPage = () => {
     "Content Management Services",
   ];
 
-  const skills = ["Ownership", "Leadership"];
+  const skills = [
+    "Ownership",
+    "Leadership",
+    "Testing",
+    "Debugging",
+    "API Integration",
+    "Problem Solving",
+    "Communication",
+    "Time Management",
+    "Attention to Detail",
+    "Basic Graphic Design",
+    "Responsive Design",
+  ];
   return (
     <>
       <Stack
