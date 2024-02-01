@@ -59,7 +59,12 @@ const CarouselOfDomes = ({ items }) => {
             }}
           >
             <Typography>{description}</Typography>
-            <Link target="_blank" rel="noopener" href={link}>
+            <Link
+              style={{ color: "white" }}
+              target="_blank"
+              rel="noopener"
+              href={link}
+            >
               Link
             </Link>
           </div>

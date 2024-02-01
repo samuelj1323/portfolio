@@ -14,6 +14,7 @@ const HeaderBar = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const appBarStyle = {
     backgroundColor: theme.palette.background.default,
+    minWidth: "100%",
     boxShadow: "none",
     color: theme.palette.text.primary,
     borderBottom: "0", // Explicitly remove any borders

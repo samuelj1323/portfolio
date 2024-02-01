@@ -9,8 +9,10 @@ import Combined from "./Combined";
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <HeaderBar />
-      <Combined />
+      <div style={{ width: "100%" }}>
+        <HeaderBar />
+        <Combined />
+      </div>
     </ThemeProvider>
   );
 };

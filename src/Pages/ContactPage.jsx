@@ -44,7 +44,7 @@ const ContactPage = () => {
             marginTop: 5,
             textAlign: "center",
             maxWidth: "40%",
-            minWidth: 400,
+            minWidth: "236px",
             alignSelf: "center",
           }}
         >
@@ -77,7 +77,6 @@ const ContactPage = () => {
         <Typography
           style={{
             color: theme.palette.text.primary,
-            fontSize: "75px",
             fontWeight: 800,
             fontFamily: "the-seasons",
             wordWrap: "break-word",

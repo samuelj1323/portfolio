@@ -35,7 +35,6 @@ const AboutPage = () => {
                 <Typography
                   style={{
                     color: theme.palette.text.primary,
-                    fontSize: "75px",
                     fontWeight: 800,
                     fontFamily: "the-seasons",
                     wordWrap: "break-word",

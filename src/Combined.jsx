@@ -6,7 +6,7 @@ import ProjectsPage from "./Pages/Projects";
 import ContactPage from "./Pages/ContactPage";
 const Combined = () => {
   return (
-    <div>
+    <div style={{ flex: 1, minWidth: "100%" }}>
       <LandingPage />
       <AboutPage />
       <BackgroundPage />

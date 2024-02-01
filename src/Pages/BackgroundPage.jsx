@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Grid,
-  Stack,
-  Typography,
-  Container,
-  useTheme,
-  CardContent,
-  Card,
-} from "@mui/material";
+import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
 import Carousel from "../Components/Carousel/Carousel";
 const BackgroundPage = () => {
   const theme = useTheme();
@@ -47,14 +39,13 @@ const BackgroundPage = () => {
               </Typography>
             </li>
             <Typography>
-              - Proactively assumed responsibility for project completion,
-              through cross department communication for any issues, regardless
-              of direct responsibility. <br /> - Lead cloud native efforts to
-              update frontend architecture <br />- Mentored new Software
-              engineers <br /> - Guided fellow developers in mastering the
-              platform, leveraging my expertise as a key contributor to its
-              creation <br /> - Collaborated with design and product teams to
-              integrate ADA compliance standards into our website designs.
+              - Led cloud-native frontend architecture enhancements, slashing
+              development time by 75% through innovative engineering solutions.{" "}
+              <br />- Spearheaded analysis and development of
+              regulatory-compliant features, blending product knowledge with
+              legal standards. <br /> - Mentored engineers in React and Node.js,
+              integrating Agile and CI/CD practices to streamline project
+              delivery.
             </Typography>
           </>
           <br />
@@ -71,8 +62,8 @@ const BackgroundPage = () => {
               - Developed a Python-based automation tool integrating Jira and
               database systems, streamlining client onboarding processes and
               achieving a 13% annual increase in productivity. <br />
-              - Proactively identified and proposed automation opportunities
-              across departments, demonstrating initiative and cross-functional
+              - Identified and proposed automation opportunities across
+              departments, demonstrating initiative and cross-functional
               collaboration skills.
               <br />
               - Adapted to changing project requirements with agility, ensuring
@@ -92,14 +83,13 @@ const BackgroundPage = () => {
               </Typography>
             </li>
             <Typography>
-              - Advanced from Programmer to Senior Programmer within a year at
-              Agrilife, recognized for leading project development and
-              consistently delivering weekly milestones.
-              <br /> - Directed the creation of an interactive game to educate
-              players on evolutionary concepts, applying expertise in game
-              design and event-based programming. <br />- Developed advanced
-              agent-based AI for the game, creating competitive and engaging
-              gameplay experiences for players.
+              - Earned promotion to Senior Programmer within a year by
+              spearheading project development, exceeding weekly milestones, and
+              enhancing game design methodologies and code readability in the
+              Godot game engine.
+              <br /> - Developed agent-based AI for the game, creating
+              competitive and engaging gameplay for players resulting in longer
+              user engagement.
               <br /> - Successfully integrated complex biological theories into
               accessible gameplay, showcasing a unique ability to translate
               academic concepts into engaging digital formats.
@@ -175,7 +165,6 @@ const BackgroundPage = () => {
                 <Typography
                   style={{
                     color: theme.palette.text.primary,
-                    fontSize: "75px",
                     fontWeight: 800,
                     fontFamily: "the-seasons",
                     wordWrap: "break-word",
