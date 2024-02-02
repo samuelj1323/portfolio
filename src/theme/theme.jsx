@@ -29,6 +29,11 @@ const theme = createTheme({
         },
       },
     },
+    MuiTypography: {
+      styleOverrides: {
+        fontSize: "32px",
+      },
+    },
   },
   palette: {
     background: {
