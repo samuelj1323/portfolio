@@ -22,11 +22,19 @@ const theme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        contained: {
+          borderRadius: 150,
+        },
+      },
+    },
   },
   palette: {
     background: {
       default: "#F5EDDA",
       slightlyDarker: "#DDC8BA",
+      white: "#FFFFFF",
     },
     text: {
       primary: "#000000",

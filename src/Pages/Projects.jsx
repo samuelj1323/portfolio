@@ -40,7 +40,7 @@ const ProjectsPage = () => {
       <Stack
         id="projects"
         style={{
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: theme.palette.background.white,
           display: "flex",
           minHeight: "100vh",
           flex: 1,

@@ -4,6 +4,7 @@ import {
   Stack,
   Typography,
   Container,
+  Card,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
@@ -16,7 +17,7 @@ const AboutPage = () => {
       <Stack
         id="about"
         style={{
-          backgroundColor: theme.palette.background.default,
+          backgroundColor: theme.palette.background.white,
           display: "flex",
           flex: 1,
         }}
@@ -27,53 +28,55 @@ const AboutPage = () => {
             justifyContent: "center",
             height: "100vh",
             width: "auto",
+            paddingTop: 50,
           }}
         >
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} md={8}>
-                <Typography
+                <Card
                   style={{
-                    color: theme.palette.text.primary,
-                    fontWeight: 800,
-                    fontFamily: "the-seasons",
-                    wordWrap: "break-word",
-                  }}
-                  variant="h3"
-                >
-                  Who is Sam?
-                </Typography>
-                <Grid
-                  container
-                  style={{
-                    paddingTop: 20,
-                    paddingLeft: 20,
-                    paddingBottom: 80,
-                  }}
-                  spacing={2}
-                />
-                <div
-                  variant="outlined"
-                  style={{
-                    color: theme.palette.text.primary,
-                    padding: "5px",
+                    borderRadius: 25,
+                    marginTop: "10%",
+                    padding: 15,
+                    boxShadow: "none",
+                    backgroundColor: theme.palette.background.default,
                   }}
                 >
-                  <Typography variant="h5">
-                    I'm a Software Engineer with 2 years of experience and a BS
-                    in Computer Science. Today I am a frontend engineer at JP
-                    Morgan Chase & Co.
-                  </Typography>
-                  <div
+                  <Typography
                     style={{
-                      width: "60%",
-                      height: 4,
-                      marginTop: "30px",
-                      backgroundColor: theme.palette.text.primary,
-                      radius: 2,
+                      color: theme.palette.text.primary,
+                      fontWeight: 800,
+                      fontFamily: "the-seasons",
+                      wordWrap: "break-word",
                     }}
+                    variant="h3"
+                  >
+                    Who is Sam?
+                  </Typography>
+                  <Grid
+                    container
+                    style={{
+                      paddingTop: 20,
+                      paddingLeft: 20,
+                      paddingBottom: 80,
+                    }}
+                    spacing={2}
                   />
-                </div>
+                  <div
+                    variant="outlined"
+                    style={{
+                      color: theme.palette.text.primary,
+                      padding: "5px",
+                    }}
+                  >
+                    <Typography variant="h5">
+                      I'm a Software Engineer with 2 years of experience and a
+                      BS in Computer Science. Today I am a frontend engineer at
+                      JP Morgan Chase & Co.
+                    </Typography>
+                  </div>
+                </Card>
               </Grid>
               <Grid
                 md={4}

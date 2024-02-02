@@ -21,7 +21,10 @@ const CarouselOfDomes = ({ items }) => {
       >
         {items?.map((item, index) => (
           <div
-            style={{ backgroundColor: "white", marginLeft: 15 }}
+            style={{
+              backgroundColor: theme.palette.background.default,
+              marginLeft: 15,
+            }}
             className="dome-card"
           >
             <div>
@@ -52,20 +55,21 @@ const CarouselOfDomes = ({ items }) => {
           </Typography>
           <div
             style={{
-              backgroundColor: theme.palette.background.slightlyDarker,
+              backgroundColor: theme.palette.background.default,
               borderRadius: 15,
               minHeight: 50,
+              marginBottom: "10px",
               padding: 5,
             }}
           >
             <Typography>{description}</Typography>
             <Link
-              style={{ color: "white" }}
+              style={{ color: "brown" }}
               target="_blank"
               rel="noopener"
               href={link}
             >
-              Link
+              Check it out...
             </Link>
           </div>
         </div>

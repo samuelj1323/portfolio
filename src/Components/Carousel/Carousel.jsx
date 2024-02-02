@@ -16,7 +16,10 @@ const Carousel = ({ items }) => {
       }}
     >
       {items.map((item, index) => (
-        <Card sx={{ minWidth: 200, m: 1, textAlign: "center" }} key={index}>
+        <Card
+          sx={{ borderRadius: 7, minWidth: 200, m: 1, textAlign: "center" }}
+          key={index}
+        >
           <CardContent
             sx={{
               textAlign: "center",

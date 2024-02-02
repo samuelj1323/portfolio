@@ -31,8 +31,9 @@ code {
 .circle-container {
   width: 280px; /* Diameter of the circle */
   height: 300px; /* Diameter of the circle */
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-radius: 25px;
   overflow: hidden; /* Hides the overflow part of the image */
   position: relative;
   display: flex;
@@ -67,14 +68,13 @@ code {
 .dome-card {
   display: flex;
   background-color: white;
-  border-top-right-radius: 40%;
+  border-radius: 25px;
   justify-content: center;
   align-items: center;
   align-content: center;
   margin-left: 15px;
   min-width: 200px;
   text-align: center;
-  border-top-left-radius: 40%;
   width: 200px;
   height: 200px;
 }

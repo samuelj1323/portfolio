@@ -42,6 +42,8 @@ const ContactPage = () => {
           sx={{
             padding: 5,
             marginTop: 5,
+            borderRadius: 7,
+            boxShadow: "none",
             textAlign: "center",
             maxWidth: "40%",
             minWidth: "236px",
