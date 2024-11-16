@@ -37,7 +37,6 @@ const LandingPage = () => {
                     color: theme.palette.text.primary,
                     fontSize: "75px",
                     fontWeight: 800,
-                    fontFamily: "the-seasons",
                     wordWrap: "break-word",
                   }}
                   variant="h3"

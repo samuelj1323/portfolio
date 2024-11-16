@@ -8,9 +8,7 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         contained: {
-          backgroundColor: "#F5EDDA",
           color: "#000000",
-          border: "1px solid black",
           borderRadius: 15,
           fontSize: 17,
           boxShadow: "none",
@@ -37,16 +35,14 @@ const theme = createTheme({
   },
   palette: {
     background: {
-      default: "#F5EDDA",
-      slightlyDarker: "#DDC8BA",
+      default: "#3B3B3B",
       white: "#FFFFFF",
     },
     text: {
-      primary: "#000000",
-      fontFamily: "the-seasons",
+      primary: "#FFFFFF",
     },
     primary: {
-      main: "#a98274",
+      main: "#FFFFFF",
     },
   },
 });

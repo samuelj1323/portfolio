@@ -45,10 +45,7 @@ const HeaderBar = () => {
         color="default"
       >
         <Toolbar style={toolbarStyle} variant="dense">
-          <Typography
-            variant="h3"
-            style={{ flexGrow: 1, fontFamily: "the-seasons" }}
-          >
+          <Typography variant="h3" style={{ flexGrow: 1 }}>
             Samuel Mahan
           </Typography>
 
