@@ -17,7 +17,7 @@ const AboutPage = () => {
       <Stack
         id="about"
         style={{
-          backgroundColor: theme.palette.background.white,
+          backgroundColor: theme.palette.background.default,
           display: "flex",
           flex: 1,
         }}
@@ -40,14 +40,13 @@ const AboutPage = () => {
                     marginTop: "10%",
                     padding: 15,
                     boxShadow: "none",
-                    backgroundColor: theme.palette.background.default,
+                    backgroundColor: theme.palette.background.darkerDefault,
                   }}
                 >
                   <Typography
                     style={{
-                      color: theme.palette.text.primary,
+                      color: theme.palette.text.accent,
                       fontWeight: 800,
-                      fontFamily: "the-seasons",
                       wordWrap: "break-word",
                     }}
                     variant="h3"
@@ -71,9 +70,22 @@ const AboutPage = () => {
                     }}
                   >
                     <Typography variant="h5">
-                      I'm a Software Engineer with 2 years of experience and a
-                      BS in Computer Science. Today I am a frontend engineer at
-                      JP Morgan Chase & Co.
+                      Hello! I'm Sam Mahan, a passionate software engineer based
+                      in New York City. I specialize in building efficient,
+                      scalable backends, developing optimization algorithms, and
+                      crafting mobile technology solutions. With expertise in
+                      Spring, React, and a keen interest in micro front-end
+                      architecture using Next.js, I bring innovative,
+                      user-focused solutions to the forefront of every project.
+                      Beyond work, I have a deep love for computer vision and
+                      machine learning, having ranked in the top third of a
+                      Kaggle multi-class classification competition and
+                      developed a high-accuracy VGG model for bird species
+                      identification. My commitment to continuous learning fuels
+                      my drive to create impactful tech experiences. Outside of
+                      coding, you’ll often find me exploring new running routes,
+                      bird watching in parks, or enjoying date nights in the
+                      vibrant streets of NYC with my wife.
                     </Typography>
                   </div>
                 </Card>
@@ -91,7 +103,7 @@ const AboutPage = () => {
                   <div className="image-vert-container">
                     <img
                       style={{ width: 500, height: "auto" }}
-                      src={HeadShot}
+                      src={HeadShot} // let's change the image. I'm not crazy about it
                       alt="Hands typing"
                     />
                   </div>

@@ -7,11 +7,16 @@ const BackgroundPage = () => {
   const Education = () => {
     return (
       <div>
-        <Typography variant="h5">Education: </Typography>
+        <Typography style={{ color: theme.palette.text.primary }} variant="h5">
+          Education:{" "}
+        </Typography>
         <ul>
           <>
             <li>
-              <Typography variant="body1">
+              <Typography
+                style={{ color: theme.palette.text.primary }}
+                variant="body1"
+              >
                 <b>Texas A&M University </b>
                 <i>(August 2018 - May 2022)</i>
                 <br />
@@ -27,18 +32,20 @@ const BackgroundPage = () => {
   const WorkHistory = () => {
     return (
       <div>
-        <Typography variant="h5">Work History: </Typography>
+        <Typography style={{ color: theme.palette.text.primary }} variant="h5">
+          Work History:{" "}
+        </Typography>
         <ul>
           <>
             <li>
-              <Typography>
+              <Typography style={{ color: theme.palette.text.primary }}>
                 <b>JP Morgan Chase & Co.</b>
                 <i>(July 2022 - Present)</i>
                 <br />
                 <i>Software Engineer 1 </i>
               </Typography>
             </li>
-            <Typography>
+            <Typography style={{ color: theme.palette.text.primary }}>
               - Led cloud-native frontend architecture enhancements, slashing
               development time by 75% through innovative engineering solutions.{" "}
               <br />- Spearheaded analysis and development of
@@ -51,14 +58,14 @@ const BackgroundPage = () => {
           <br />
           <>
             <li>
-              <Typography>
+              <Typography style={{ color: theme.palette.text.primary }}>
                 <b>Apex Fintech Solutions</b>
                 <i>(June 2021 - August 2021)</i>
                 <br />
                 <i>Application Support Intern </i>
               </Typography>
             </li>
-            <Typography>
+            <Typography style={{ color: theme.palette.text.primary }}>
               - Developed a Python-based automation tool integrating Jira and
               database systems, streamlining client onboarding processes and
               achieving a 13% annual increase in productivity. <br />
@@ -75,14 +82,14 @@ const BackgroundPage = () => {
           <br />
           <>
             <li>
-              <Typography>
+              <Typography style={{ color: theme.palette.text.primary }}>
                 <b>Texas A&M Agrilife</b>
                 <i>(September 2020 - June 2020)</i>
                 <br />
                 <i>Senior Programmer </i>
               </Typography>
             </li>
-            <Typography>
+            <Typography style={{ color: theme.palette.text.primary }}>
               - Earned promotion to Senior Programmer within a year by
               spearheading project development, exceeding weekly milestones, and
               enhancing game design methodologies and code readability in the
@@ -164,9 +171,8 @@ const BackgroundPage = () => {
               <Grid item xs={12}>
                 <Typography
                   style={{
-                    color: theme.palette.text.primary,
+                    color: theme.palette.text.accent,
                     fontWeight: 800,
-                    fontFamily: "the-seasons",
                     wordWrap: "break-word",
                   }}
                   variant="h3"

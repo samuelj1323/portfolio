@@ -37,7 +37,7 @@ const Carousel = ({ items }) => {
               alignContent: "center",
             }}
           >
-            <Typography style={{ width: "100%" }} variant="h5">
+            <Typography style={{ color: "black", width: "100%" }} variant="h5">
               {item}
             </Typography>
           </CardContent>

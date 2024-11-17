@@ -23,14 +23,13 @@ const LandingPage = () => {
       >
         <div
           style={{
-            alignContent: "center",
             justifyContent: "center",
-            height: "100vh",
+            height: "100%",
             width: "auto",
           }}
         >
-          <Container>
-            <Grid container spacing={3} style={{ paddingTop: "150px" }}>
+          <Container style={{ paddingTop: "200px", paddingBottom: "200px" }}>
+            <Grid container spacing={3}>
               <Grid item xs={12} md={8}>
                 <Typography
                   style={{
@@ -41,32 +40,8 @@ const LandingPage = () => {
                   }}
                   variant="h3"
                 >
-                  Welcome to My Portfolio
+                  Welcome to My <a style={{ color: "gold" }}>Portfolio</a>
                 </Typography>
-                <Grid
-                  container
-                  style={{
-                    display: "flex",
-                    flex: 1,
-                    paddingTop: 50,
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignContent: "center",
-                  }}
-                  spacing={2}
-                >
-                  <Button
-                    onClick={() =>
-                      document
-                        .getElementById("contact")
-                        .scrollIntoView({ behavior: "smooth" })
-                    }
-                    sx={{ width: 200, height: 40, textTransform: "none" }}
-                    variant="contained"
-                  >
-                    Let's Chat
-                  </Button>
-                </Grid>
               </Grid>
               <Grid
                 md={4}

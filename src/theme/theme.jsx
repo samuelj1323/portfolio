@@ -36,10 +36,12 @@ const theme = createTheme({
   palette: {
     background: {
       default: "#3B3B3B",
+      darkerDefault: "#313131",
       white: "#FFFFFF",
     },
     text: {
       primary: "#FFFFFF",
+      accent: "#FFD700",
     },
     primary: {
       main: "#FFFFFF",
