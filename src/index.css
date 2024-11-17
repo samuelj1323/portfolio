@@ -31,9 +31,6 @@ code {
 .circle-container {
   width: 280px; /* Diameter of the circle */
   height: 300px; /* Diameter of the circle */
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  border-radius: 25px;
   overflow: hidden; /* Hides the overflow part of the image */
   position: relative;
   display: flex;

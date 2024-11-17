@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button, Link, Stack, Typography, useTheme } from "@mui/material";
 
-const CarouselOfDomes = ({ items }) => {
+const DiscoverFeed = ({ items }) => {
   const [description, setDescription] = React.useState("");
   const [link, setLink] = React.useState("");
   const theme = useTheme();
@@ -56,7 +56,6 @@ const CarouselOfDomes = ({ items }) => {
           <div
             style={{
               backgroundColor: theme.palette.background.default,
-              borderRadius: 15,
               minHeight: 50,
               marginBottom: "10px",
               padding: 5,
@@ -78,4 +77,4 @@ const CarouselOfDomes = ({ items }) => {
   );
 };
 
-export default CarouselOfDomes;
+export default DiscoverFeed;
