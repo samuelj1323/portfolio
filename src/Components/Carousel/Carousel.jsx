@@ -18,7 +18,6 @@ const Carousel = ({ items }) => {
       {items.map((item, index) => (
         <Card
           sx={{
-            borderRadius: 7,
             flex: 1,
             display: "flex",
             justifyContent: "center",

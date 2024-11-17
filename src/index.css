@@ -62,15 +62,14 @@ code {
   clip-path: ellipse(40% 45% at 60% 50%);
 }
 
-.dome-card {
+.project-card {
   display: flex;
-  background-color: white;
-  border-radius: 25px;
+  background-color: gray;
+  border: white;
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin-left: 15px;
-  min-width: 200px;
+  border: 1px solid #ccc;
   text-align: center;
   width: 200px;
   height: 200px;

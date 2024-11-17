@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Button, Link, Stack, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Link,
+  Stack,
+  Typography,
+  useTheme,
+  Grid,
+} from "@mui/material";
 
 const DiscoverFeed = ({ items }) => {
   const [description, setDescription] = React.useState("");
@@ -8,40 +16,37 @@ const DiscoverFeed = ({ items }) => {
   return (
     <Stack>
       <Box
-        sx={{
-          display: "flex",
-          overflowX: "auto", // Enables horizontal scrolling
-          "&::-webkit-scrollbar": {
-            height: "8px", // Customizes the height of the scrollbar (optional)
-          },
-          "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "rgba(0,0,0,.1)", // Customizes the color of the scrollbar (optional)
-          },
-        }}
+      // sx={{
+      //   display: "flex",
+      //   overflowX: "auto", // Enables horizontal scrolling
+      //   "&::-webkit-scrollbar": {
+      //     height: "8px", // Customizes the height of the scrollbar (optional)
+      //   },
+      //   "&::-webkit-scrollbar-thumb": {
+      //     backgroundColor: "rgba(0,0,0,.1)", // Customizes the color of the scrollbar (optional)
+      //   },
+      // }}
       >
-        {items?.map((item, index) => (
-          <div
-            style={{
-              backgroundColor: theme.palette.background.default,
-              marginLeft: 15,
-            }}
-            className="dome-card"
-          >
-            <div>
-              <Typography>
-                <b>{item.title}</b>
-              </Typography>
-              <Button
-                onClick={() => {
-                  setDescription(item.description);
-                  setLink(item.link);
-                }}
-              >
-                Details
-              </Button>
-            </div>
-          </div>
-        ))}
+        <Grid container spacing={2} style={{ backgroundColor: "white" }}>
+          {items?.map((item, index) => (
+            <Grid item xs={4} className={"project-card"}>
+              <div>
+                <Typography>
+                  <b>{item.name}</b>
+                </Typography>
+                {/* <Typography>{item.branches_url}</Typography> */}
+                <Button
+                  onClick={() => {
+                    setDescription(item.description);
+                    setLink(item.link);
+                  }}
+                >
+                  Details
+                </Button>
+              </div>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
       {description && (
         <div>
@@ -58,7 +63,6 @@ const DiscoverFeed = ({ items }) => {
               backgroundColor: theme.palette.background.default,
               minHeight: 50,
               marginBottom: "10px",
-              padding: 5,
             }}
           >
             <Typography>{description}</Typography>

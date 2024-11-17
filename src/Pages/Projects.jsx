@@ -78,13 +78,16 @@ const ProjectsPage = () => {
           }}
         >
           <Container>
-            <Grid container spacing={3} style={{ paddingTop: "100px" }}>
+            <Grid
+              container
+              spacing={3}
+              style={{ paddingTop: "100px", backgroundColor: "white" }}
+            >
               <Grid item xs={12}>
                 <Typography
                   style={{
-                    color: theme.palette.text.primary,
+                    color: "black",
                     fontWeight: 800,
-                    fontFamily: "the-seasons",
                     wordWrap: "break-word",
                   }}
                   variant="h3"
