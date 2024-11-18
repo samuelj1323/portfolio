@@ -62,8 +62,8 @@ const ProjectsPage = () => {
     <>
       <Stack
         id="projects"
+        f
         style={{
-          backgroundColor: theme.palette.background.white,
           display: "flex",
           minHeight: "100vh",
           flex: 1,
@@ -78,11 +78,7 @@ const ProjectsPage = () => {
           }}
         >
           <Container>
-            <Grid
-              container
-              spacing={3}
-              style={{ paddingTop: "100px", backgroundColor: "white" }}
-            >
+            <Grid container spacing={3} style={{ paddingTop: "100px" }}>
               <Grid item xs={12}>
                 <Typography
                   style={{

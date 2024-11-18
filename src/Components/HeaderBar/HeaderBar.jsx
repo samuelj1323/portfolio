@@ -8,9 +8,10 @@ import {
   ButtonGroup,
   useMediaQuery,
 } from "@mui/material";
-
+import { useNavigate } from "react-router-dom";
 const HeaderBar = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const appBarStyle = {
     backgroundColor: theme.palette.background.default,
@@ -35,6 +36,9 @@ const HeaderBar = () => {
       backgroundColor: "#white",
     },
   };
+  const navigateToPage = (page) => {
+    navigate(page);
+  };
 
   return (
     <div>
@@ -45,7 +49,11 @@ const HeaderBar = () => {
         color="default"
       >
         <Toolbar style={toolbarStyle} variant="dense">
-          <Typography variant="h3" style={{ flexGrow: 1 }}>
+          <Typography
+            onClick={() => navigateToPage("/")}
+            variant="h3"
+            style={{ flexGrow: 1 }}
+          >
             Samuel Mahan
           </Typography>
 
@@ -53,41 +61,25 @@ const HeaderBar = () => {
             <ButtonGroup variant="text">
               <Button
                 style={buttonStyle}
-                onClick={() => {
-                  document
-                    .getElementById("about")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
+                onClick={() => navigateToPage("/about")}
               >
                 About
               </Button>
               <Button
                 style={buttonStyle}
-                onClick={() => {
-                  document
-                    .getElementById("my-background")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
+                onClick={() => navigateToPage("/background")}
               >
                 Background
               </Button>
               <Button
                 style={buttonStyle}
-                onClick={() => {
-                  document
-                    .getElementById("projects")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
+                onClick={() => navigateToPage("/projects")}
               >
                 Projects
               </Button>
               <Button
                 style={buttonStyle}
-                onClick={() => {
-                  document
-                    .getElementById("contact")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
+                onClick={() => navigateToPage("/contact")}
               >
                 Contact
               </Button>

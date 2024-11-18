@@ -74,3 +74,37 @@ code {
   width: 200px;
   height: 200px;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.app {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: radial-gradient(
+    var(--brand-on-background-weak) 0.5px,
+    var(--static-transparent) 0.5px
+  );
+  background-size: var(--static-space-24) var(--static-space-24);
+  mask-image: radial-gradient(
+    600px at 1116px 298px,
+    rgb(0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-size: 100% 100%;
+}
+
+#tsparticles canvas {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; /* Set a negative z-index to place it behind the content */
+}

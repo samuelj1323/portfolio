@@ -4,15 +4,16 @@ import AboutPage from "./Pages/AboutPage";
 import BackgroundPage from "./Pages/BackgroundPage";
 import ProjectsPage from "./Pages/Projects";
 import ContactPage from "./Pages/ContactPage";
+import { Routes, Route } from "react-router-dom";
 const Combined = () => {
   return (
-    <div style={{ flex: 1, minWidth: "100%" }}>
-      <LandingPage />
-      <AboutPage />
-      <BackgroundPage />
-      <ProjectsPage />
-      <ContactPage />
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/background" element={<BackgroundPage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+    </Routes>
   );
 };
 export default Combined;

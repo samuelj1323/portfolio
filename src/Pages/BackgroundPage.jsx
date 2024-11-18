@@ -152,7 +152,6 @@ const BackgroundPage = () => {
       <Stack
         id="my-background"
         style={{
-          backgroundColor: theme.palette.background.default,
           display: "flex",
           minHeight: "100vh",
           flex: 1,

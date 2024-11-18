@@ -17,7 +17,6 @@ const AboutPage = () => {
       <Stack
         id="about"
         style={{
-          backgroundColor: theme.palette.background.default,
           display: "flex",
           flex: 1,
         }}

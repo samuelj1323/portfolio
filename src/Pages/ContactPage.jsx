@@ -68,7 +68,6 @@ const ContactPage = () => {
   return (
     <Stack
       style={{
-        backgroundColor: theme.palette.background.default,
         display: "flex",
         minHeight: "100vh",
         flex: 1,

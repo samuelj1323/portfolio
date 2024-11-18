@@ -1,22 +1,14 @@
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import {
-  Grid,
-  Stack,
-  Typography,
-  Container,
-  useTheme,
-  Button,
-} from "@mui/material";
+import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
 import HeadShot from "../assets/current_headshot.png";
 const LandingPage = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <>
+    <div>
       <Stack
         style={{
-          backgroundColor: theme.palette.background.default,
           display: "flex",
           flex: 1,
         }}
@@ -33,14 +25,13 @@ const LandingPage = () => {
               <Grid item xs={12} md={8}>
                 <Typography
                   style={{
-                    color: theme.palette.text.primary,
                     fontSize: "75px",
                     fontWeight: 800,
                     wordWrap: "break-word",
                   }}
                   variant="h3"
                 >
-                  Welcome to My <a style={{ color: "gold" }}>Portfolio</a>
+                  Welcome to My <b style={{ color: "gold" }}>Portfolio</b>
                 </Typography>
               </Grid>
               <Grid
@@ -66,7 +57,7 @@ const LandingPage = () => {
           </Container>
         </div>
       </Stack>
-    </>
+    </div>
   );
 };
 
