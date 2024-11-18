@@ -65,14 +65,12 @@ code {
 .project-card {
   display: flex;
   background-color: gray;
-  border: white;
   justify-content: center;
   align-items: center;
   align-content: center;
   border: 1px solid #ccc;
   text-align: center;
-  width: 200px;
-  height: 200px;
+  height: 300px;
 }
 .grid-container {
   display: grid;

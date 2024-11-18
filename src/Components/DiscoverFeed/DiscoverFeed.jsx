@@ -1,36 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Box,
   Button,
   Link,
   Stack,
+  Card,
   Typography,
   useTheme,
   Grid,
 } from "@mui/material";
-
+import Masonry from "@mui/lab/Masonry";
 const DiscoverFeed = ({ items }) => {
   const [description, setDescription] = React.useState("");
   const [link, setLink] = React.useState("");
   const theme = useTheme();
   return (
     <Stack>
-      <Box
-      // sx={{
-      //   display: "flex",
-      //   overflowX: "auto", // Enables horizontal scrolling
-      //   "&::-webkit-scrollbar": {
-      //     height: "8px", // Customizes the height of the scrollbar (optional)
-      //   },
-      //   "&::-webkit-scrollbar-thumb": {
-      //     backgroundColor: "rgba(0,0,0,.1)", // Customizes the color of the scrollbar (optional)
-      //   },
-      // }}
-      >
-        <Grid container spacing={2} style={{ backgroundColor: "white" }}>
+      <Box>
+        <Masonry container columns={3} spacing={2}>
           {items?.map((item, index) => (
-            <Grid item xs={4} className={"project-card"}>
-              <div>
+            <div
+              item
+              style={{ height: index % 3 === 1 ? 400 : 200 }}
+              className={"project-card"}
+            >
+              <>
                 <Typography>
                   <b>{item.name}</b>
                 </Typography>
@@ -43,10 +37,10 @@ const DiscoverFeed = ({ items }) => {
                 >
                   Details
                 </Button>
-              </div>
-            </Grid>
+              </>
+            </div>
           ))}
-        </Grid>
+        </Masonry>
       </Box>
       {description && (
         <div>
