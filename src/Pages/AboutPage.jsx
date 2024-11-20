@@ -7,6 +7,7 @@ import {
   Card,
   useTheme,
   useMediaQuery,
+  Grid2,
 } from "@mui/material";
 import HeadShot from "../assets/headshot_rect.png";
 const AboutPage = () => {
@@ -52,15 +53,6 @@ const AboutPage = () => {
                     backgroundColor: theme.palette.background.darkerDefault,
                   }}
                 >
-                  <Grid
-                    container
-                    style={{
-                      paddingTop: 20,
-                      paddingLeft: 20,
-                      paddingBottom: 80,
-                    }}
-                    spacing={2}
-                  />
                   <div
                     variant="outlined"
                     style={{
@@ -68,10 +60,10 @@ const AboutPage = () => {
                       padding: "5px",
                     }}
                   >
-                    <Typography variant="h5">Howdy! I'm Sam Mahan</Typography>
+                    <Typography variant="h5">Howdy! I'm Sam Mahan,</Typography>
                     <Typography>
                       {" "}
-                      , a dedicated and product-focused software engineer
+                      a dedicated and product-focused software engineer
                       originally from Houston, Texas, and a proud graduate of
                       Texas A&M University. My passion lies in taking ownership
                       of projects from start to finish, ensuring a deep sense of
