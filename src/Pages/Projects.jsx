@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Grid, Stack, Typography, Container } from "@mui/material";
+import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
 import { token, username } from "../token";
 import { Octokit } from "octokit";
 import DiscoverFeed from "../Components/DiscoverFeed/DiscoverFeed";
@@ -8,6 +8,7 @@ const octokit = new Octokit({
 });
 
 const ProjectsPage = () => {
+  const theme = useTheme();
   const [projects, setProjects] = React.useState(null);
   React.useEffect(() => {
     const getRepos = async () => {
@@ -17,7 +18,6 @@ const ProjectsPage = () => {
     };
     getRepos();
   }, []);
-  // const projects = [
   //   {
   //     title: "Project Pabu",
   //     link: "https://github.com/samuelj1323/projectPabu",
@@ -73,7 +73,7 @@ const ProjectsPage = () => {
               <Grid item xs={12}>
                 <Typography
                   style={{
-                    color: "black",
+                    color: theme.palette.text.accent,
                     fontWeight: 800,
                     wordWrap: "break-word",
                   }}

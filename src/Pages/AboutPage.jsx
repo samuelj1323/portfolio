@@ -25,14 +25,24 @@ const AboutPage = () => {
           style={{
             alignContent: "center",
             justifyContent: "center",
-            height: "100vh",
-            width: "auto",
-            paddingTop: 50,
+            display: "flex",
+            flex: 1,
+            paddingTop: 100,
           }}
         >
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} md={8}>
+                <Typography
+                  style={{
+                    color: theme.palette.text.accent,
+                    fontWeight: 800,
+                    wordWrap: "break-word",
+                  }}
+                  variant="h3"
+                >
+                  About
+                </Typography>
                 <Card
                   style={{
                     borderRadius: 25,
@@ -42,16 +52,6 @@ const AboutPage = () => {
                     backgroundColor: theme.palette.background.darkerDefault,
                   }}
                 >
-                  <Typography
-                    style={{
-                      color: theme.palette.text.accent,
-                      fontWeight: 800,
-                      wordWrap: "break-word",
-                    }}
-                    variant="h3"
-                  >
-                    Who is Sam?
-                  </Typography>
                   <Grid
                     container
                     style={{
@@ -68,23 +68,19 @@ const AboutPage = () => {
                       padding: "5px",
                     }}
                   >
-                    <Typography variant="h5">
-                      Hello! I'm Sam Mahan, a passionate software engineer based
-                      in New York City. I specialize in building efficient,
-                      scalable backends, developing optimization algorithms, and
-                      crafting mobile technology solutions. With expertise in
-                      Spring, React, and a keen interest in micro front-end
-                      architecture using Next.js, I bring innovative,
-                      user-focused solutions to the forefront of every project.
-                      Beyond work, I have a deep love for computer vision and
-                      machine learning, having ranked in the top third of a
-                      Kaggle multi-class classification competition and
-                      developed a high-accuracy VGG model for bird species
-                      identification. My commitment to continuous learning fuels
-                      my drive to create impactful tech experiences. Outside of
-                      coding, you’ll often find me exploring new running routes,
-                      bird watching in parks, or enjoying date nights in the
-                      vibrant streets of NYC with my wife.
+                    <Typography variant="h5">Howdy! I'm Sam Mahan</Typography>
+                    <Typography>
+                      {" "}
+                      , a dedicated and product-focused software engineer
+                      originally from Houston, Texas, and a proud graduate of
+                      Texas A&M University. My passion lies in taking ownership
+                      of projects from start to finish, ensuring a deep sense of
+                      fulfillment in my work. With two years of experience as a
+                      full-stack engineer, I specialize in Microfrontend
+                      Development and architecture. In my free time, I love
+                      experimenting with machine learning models, merging
+                      innovation with my engineering expertise to continuously
+                      enhance my craft.
                     </Typography>
                   </div>
                 </Card>
@@ -99,9 +95,9 @@ const AboutPage = () => {
                 }}
               >
                 {!isSmallScreen && (
-                  <div className="image-vert-container">
+                  <div>
                     <img
-                      style={{ width: 500, height: "auto" }}
+                      style={{ width: 300, height: "auto" }}
                       src={HeadShot} // let's change the image. I'm not crazy about it
                       alt="Hands typing"
                     />
