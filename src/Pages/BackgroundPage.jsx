@@ -1,6 +1,21 @@
 import React from "react";
 import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
 import Carousel from "../Components/Carousel/Carousel";
+import reactLogo from "../assets/react_image_2.png";
+import jenkinsLogo from "../assets/jenkins_cons.jpg";
+import moduleFed from "../assets/mod_fed_icon.png";
+import webpack_5 from "../assets/webpack_5.png";
+import python from "../assets/python_icon.webp";
+import ts_icon from "../assets/ts_icon.png";
+import aws from "../assets/aws_icon.png";
+import git from "../assets/git_icon.png";
+import bitbucket from "../assets/bitbucket.jpg";
+import github from "../assets/github.jpeg";
+import jest from "../assets/jets.jpg";
+import godot from "../assets/godot.jpeg";
+import java from "../assets/java.png";
+import spring from "../assets/spring.webp";
+import pytorch from "../assets/pytorch.png";
 const BackgroundPage = () => {
   const theme = useTheme();
 
@@ -108,44 +123,21 @@ const BackgroundPage = () => {
   };
 
   const technologies = [
-    "React",
-    "Jenkins",
-    "Python",
-    "Module Federation",
-    "Webpack 5",
-    "Typescript",
-    "AWS",
-    "Javscript",
-    "Git",
-    "Bitbucket",
-    "Github",
-    "Jest Testing",
-    "Godot",
-  ];
-  const concepts = [
-    "Front-end development",
-    "Version control",
-    "Deep learning",
-    "Agile",
-    "DOM",
-    "Microfrontend Development",
-    "Data Structures",
-    "Algorithms",
-    "Content Management Services",
-  ];
-
-  const skills = [
-    "Ownership",
-    "Leadership",
-    "Testing",
-    "Debugging",
-    "API Integration",
-    "Problem Solving",
-    "Communication",
-    "Time Management",
-    "Attention to Detail",
-    "Basic Graphic Design",
-    "Responsive Design",
+    { src: reactLogo, label: "React" },
+    { src: jenkinsLogo, label: "Jenkins" },
+    { src: pytorch, label: "Pytorch" },
+    { src: python, label: "Python" },
+    { src: aws, label: "AWS" },
+    { src: moduleFed, label: "Module Federation" },
+    { src: webpack_5, label: "Webpack 5" },
+    { src: ts_icon, label: "Typescript" },
+    { src: git, label: "Git" },
+    { src: github, label: "Github" },
+    { src: bitbucket, label: "Bitbucket" },
+    { src: jest, label: "Jest testing" },
+    { src: godot, label: "Godot" },
+    { src: java, label: "Java" },
+    { src: spring, label: "Spring" },
   ];
   return (
     <>
@@ -192,14 +184,6 @@ const BackgroundPage = () => {
                 <WorkHistory />
                 <Typography variant="h5">Technologies:</Typography>
                 <Carousel items={technologies} />
-                <br />
-                <br />
-                <Typography variant="h5">Concepts:</Typography>
-                <Carousel items={concepts} />
-                <br />
-                <br />
-                <Typography variant="h5">Skills:</Typography>
-                <Carousel items={skills} />
               </Grid>
             </Grid>
           </Container>

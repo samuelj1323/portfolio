@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, Typography, Box } from "@mui/material";
+import { Card, Typography, Box } from "@mui/material";
 
 const Carousel = ({ items }) => {
   return (
@@ -16,31 +16,12 @@ const Carousel = ({ items }) => {
       }}
     >
       {items.map((item, index) => (
-        <Card
-          sx={{
-            flex: 1,
-            display: "flex",
-            justifyContent: "center",
-            minWidth: 200,
-            m: 1,
-            textAlign: "center",
-          }}
-          key={index}
-        >
-          <CardContent
-            sx={{
-              flex: 1,
-              textAlign: "center",
-              position: "relative",
-              display: "flex",
-              alignContent: "center",
-            }}
-          >
-            <Typography style={{ color: "black", width: "100%" }} variant="h5">
-              {item}
-            </Typography>
-          </CardContent>
-        </Card>
+        <div style={{ marginLeft: 30 }}>
+          <img style={{ width: 120, height: 120 }} src={item?.src} />
+          <Typography style={{ color: "black", width: "100%" }} variant="h5">
+            {item?.label}
+          </Typography>
+        </div>
       ))}
     </Box>
   );
