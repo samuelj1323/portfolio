@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, Button, Link, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Dialog, Link, Stack, Typography, useTheme } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
 const DiscoverFeed = ({ items }) => {
   const [description, setDescription] = React.useState("");
   const [link, setLink] = React.useState("");
+  const [open, setOpen] = React.useState(false);
   const theme = useTheme();
   return (
     <Stack>
@@ -14,27 +15,23 @@ const DiscoverFeed = ({ items }) => {
               item
               style={{ height: index % 3 === 1 ? 400 : 200 }}
               className={"project-card"}
+              onClick={() => {
+                setDescription(item.description);
+                setLink(item.link);
+                setOpen(true);
+              }}
             >
               <>
                 <Typography>
                   <b>{item.name}</b>
                 </Typography>
-                {/* <Typography>{item.branches_url}</Typography> */}
-                <Button
-                  onClick={() => {
-                    setDescription(item.description);
-                    setLink(item.link);
-                  }}
-                >
-                  Details
-                </Button>
               </>
             </div>
           ))}
         </Masonry>
       </Box>
-      {description && (
-        <div>
+      {open && (
+        <Dialog onClose={() => setOpen(false)} open={open}>
           <Typography
             style={{
               marginTop: 15,
@@ -45,14 +42,14 @@ const DiscoverFeed = ({ items }) => {
           </Typography>
           <div
             style={{
-              backgroundColor: theme.palette.background.default,
-              minHeight: 50,
+              minHeight: 300,
+              minWidth: 500,
               marginBottom: "10px",
             }}
           >
-            <Typography>{description}</Typography>
+            <Typography color="black">{description}</Typography>
             <Link
-              style={{ color: "brown" }}
+              style={{ color: theme.palette.text.accent }}
               target="_blank"
               rel="noopener"
               href={link}
@@ -60,7 +57,7 @@ const DiscoverFeed = ({ items }) => {
               Check it out...
             </Link>
           </div>
-        </div>
+        </Dialog>
       )}
     </Stack>
   );

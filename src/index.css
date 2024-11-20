@@ -64,13 +64,17 @@ code {
 
 .project-card {
   display: flex;
-  background-color: gray;
+  background-color: grey;
   justify-content: center;
   align-items: center;
   align-content: center;
   border: 1px solid #ccc;
   text-align: center;
   height: 300px;
+  transition: background-color 0.2s ease-in-out;
+}
+.project-card:hover {
+  background-color: darkgrey;
 }
 .grid-container {
   display: grid;
