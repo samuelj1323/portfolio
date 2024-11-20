@@ -1,14 +1,5 @@
-import React, { useRef } from "react";
-import {
-  Box,
-  Button,
-  Link,
-  Stack,
-  Card,
-  Typography,
-  useTheme,
-  Grid,
-} from "@mui/material";
+import React from "react";
+import { Box, Button, Link, Stack, Typography, useTheme } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
 const DiscoverFeed = ({ items }) => {
   const [description, setDescription] = React.useState("");

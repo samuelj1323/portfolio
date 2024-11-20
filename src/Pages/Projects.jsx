@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
+import { Grid, Stack, Typography, Container } from "@mui/material";
 import { token, username } from "../token";
 import { Octokit } from "octokit";
 import DiscoverFeed from "../Components/DiscoverFeed/DiscoverFeed";
@@ -14,14 +14,6 @@ const ProjectsPage = () => {
       const { data } = await octokit.request(`GET /users/${username}/repos`);
       setProjects(data);
       console.log(data);
-      // for (const repo of data) {
-      //   const { data: readme } = await octokit.request(
-      //     `GET /repos/${username}/${repo.name}/readme`
-      //   );
-
-      //   console.log(`Repository: ${repo.name}`);
-      //   console.log(readme);
-      // }
     };
     getRepos();
   }, []);
@@ -57,7 +49,6 @@ const ProjectsPage = () => {
   //       "The 'Andon app' epitomizes the culmination of my initial foray into cross-platform mobile application development, undertaken during my first internship. This project served as a fertile ground for my immersion into React Native and the broader domain of front-end development. It represented a series of firsts for me, marking my initial engagement with managing form values, implementing validations, and navigating the complexities of routing. The Andon app project was not just a technical endeavor but a significant learning milestone, offering me invaluable insights and hands-on experience in the intricacies of building intuitive and responsive mobile applications.",
   //   },
   // ];
-  const theme = useTheme();
   return (
     <>
       <Stack

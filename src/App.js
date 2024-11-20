@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import HeaderBar from "./Components/HeaderBar";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
@@ -6,7 +6,6 @@ import theme from "./theme/theme";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import Combined from "./Combined";
-import zIndex from "@mui/material/styles/zIndex";
 
 const App = () => {
   const [init, setInit] = useState(false);
