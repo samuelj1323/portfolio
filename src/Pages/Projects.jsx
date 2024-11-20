@@ -28,7 +28,18 @@ const ProjectsPage = () => {
     getRepos();
   }, []);
   if (isLoading) {
-    return <CircularProgress />;
+    return (
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "cent",
+        }}
+      >
+        <CircularProgress sx={{ height: 300, width: 300 }} />
+      </div>
+    );
   }
   return (
     <>
