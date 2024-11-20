@@ -1,4 +1,5 @@
 import React from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { Box, Dialog, Link, Stack, Typography, useTheme } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
 const DiscoverFeed = ({ items }) => {
@@ -6,10 +7,12 @@ const DiscoverFeed = ({ items }) => {
   const [link, setLink] = React.useState("");
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
+
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Stack>
       <Box>
-        <Masonry container columns={3} spacing={2}>
+        <Masonry container columns={isSmallScreen ? 2 : 3} spacing={2}>
           {items?.map((item, index) => (
             <div
               item

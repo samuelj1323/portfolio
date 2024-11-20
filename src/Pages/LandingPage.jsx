@@ -1,8 +1,18 @@
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Grid, Stack, Typography, Container, useTheme } from "@mui/material";
+import {
+  Grid,
+  Stack,
+  Typography,
+  Container,
+  useTheme,
+  Button,
+} from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import SendIcon from "@mui/icons-material/Send";
 import HeadShot from "../assets/current_headshot.png";
 const LandingPage = () => {
+  const navigate = useNavigate();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
@@ -33,6 +43,13 @@ const LandingPage = () => {
                 >
                   Welcome to My <b style={{ color: "gold" }}>Portfolio</b>
                 </Typography>
+                <Button
+                  onClick={() => navigate("/contact")}
+                  variant="contained"
+                  endIcon={<SendIcon />}
+                >
+                  Let's Chat
+                </Button>
               </Grid>
               <Grid
                 md={4}
