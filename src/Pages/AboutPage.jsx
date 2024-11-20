@@ -7,7 +7,6 @@ import {
   Card,
   useTheme,
   useMediaQuery,
-  Grid2,
 } from "@mui/material";
 import HeadShot from "../assets/headshot_rect.png";
 const AboutPage = () => {
