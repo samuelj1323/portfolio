@@ -18,7 +18,7 @@ const Carousel = ({ items }) => {
       {items.map((item, index) => (
         <div style={{ marginLeft: 30 }}>
           <img style={{ width: 120, height: 120 }} src={item?.src} />
-          <Typography style={{ color: "black", width: "100%" }} variant="h5">
+          <Typography style={{ color: "white", width: "100%" }} variant="h5">
             {item?.label}
           </Typography>
         </div>

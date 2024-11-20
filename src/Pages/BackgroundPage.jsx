@@ -57,7 +57,7 @@ const BackgroundPage = () => {
                 <b>JP Morgan Chase & Co.</b>
                 <i>(July 2022 - Present)</i>
                 <br />
-                <i>Software Engineer 1 </i>
+                <i>Software Engineer </i>
               </Typography>
             </li>
             <Typography style={{ color: theme.palette.text.primary }}>
@@ -65,9 +65,14 @@ const BackgroundPage = () => {
               development time by 75% through innovative engineering solutions.{" "}
               <br />- Spearheaded analysis and development of
               regulatory-compliant features, blending product knowledge with
-              legal standards. <br /> - Mentored engineers in React and Node.js,
+              legal standards. <br /> - Mentored engineers in React and Spring,
               integrating Agile and CI/CD practices to streamline project
               delivery.
+              <br /> - Developed the standard for microfrontend development
+              within the onboarding team
+              <br />- Selected to contribute as a key member of the team that
+              developed and implemented a company-wide design system.
+              <br />- Nominated and presented for a high craft engineering award
             </Typography>
           </>
           <br />
@@ -87,11 +92,9 @@ const BackgroundPage = () => {
               - Identified and proposed automation opportunities across
               departments, demonstrating initiative and cross-functional
               collaboration skills.
-              <br />
-              - Adapted to changing project requirements with agility, ensuring
-              the successful and effective delivery of the automation solution
-              despite initial pivots in strategy.
-              <br />
+              <br />- Adapted to changing project requirements with agility,
+              ensuring the successful and effective delivery of the automation
+              solution despite initial pivots in strategy.
             </Typography>
           </>
           <br />
@@ -182,7 +185,9 @@ const BackgroundPage = () => {
 
                 <Education />
                 <WorkHistory />
-                <Typography variant="h5">Technologies:</Typography>
+                <Typography color={theme.palette.text.primary} variant="h5">
+                  Technologies:
+                </Typography>
                 <Carousel items={technologies} />
               </Grid>
             </Grid>

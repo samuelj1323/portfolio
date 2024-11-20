@@ -35,35 +35,33 @@ const ContactPage = () => {
 
   //@Todo Fix up this method to make it generic.
 
-  const EnumerateContactCards = () => {
-    return contactArr.map((item) => {
-      return (
-        <Card
-          sx={{
-            padding: 5,
-            marginTop: 5,
-            borderRadius: 7,
-            boxShadow: "none",
-            textAlign: "center",
-            maxWidth: "40%",
-            minWidth: "236px",
-            alignSelf: "center",
-          }}
-        >
+  const EnumerateLinks = () => {
+    return (
+      <Card
+        sx={{
+          padding: 5,
+          marginTop: 5,
+          boxShadow: "none",
+          textAlign: "center",
+          width: "80%",
+          alignSelf: "center",
+        }}
+      >
+        {contactArr?.map((item) => (
           <Typography>
             <Link
               target="_blank"
               rel="noopener"
               to="#"
               href={item.link}
-              sx={{ color: "brown" }}
+              sx={{ color: theme.palette.text.accent }}
             >
-              {item.label}
+              <b>{item.label}</b>
             </Link>
           </Typography>
-        </Card>
-      );
-    });
+        ))}
+      </Card>
+    );
   };
   return (
     <Stack
@@ -77,17 +75,17 @@ const ContactPage = () => {
       <Container>
         <Typography
           style={{
-            color: theme.palette.text.primary,
+            color: theme.palette.text.accent,
             fontWeight: 800,
-            fontFamily: "the-seasons",
             wordWrap: "break-word",
+            paddingTop: 100,
           }}
           variant="h3"
         >
           Let's chat...
         </Typography>
       </Container>
-      <EnumerateContactCards />
+      <EnumerateLinks />
     </Stack>
   );
 };
