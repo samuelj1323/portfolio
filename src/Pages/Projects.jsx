@@ -7,14 +7,17 @@ import {
   useTheme,
   CircularProgress,
 } from "@mui/material";
-import { token, username } from "../token";
-import { Octokit } from "octokit";
+
 import DiscoverFeed from "../Components/DiscoverFeed/DiscoverFeed";
+import { Octokit } from "octokit";
+
+const token = process.env.GITHUB_TOKEN;
 const octokit = new Octokit({
   auth: token,
 });
 
 const ProjectsPage = () => {
+  const username = process.env.USERNAME;
   const theme = useTheme();
   const [projects, setProjects] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
