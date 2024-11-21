@@ -11,10 +11,8 @@ import {
 import DiscoverFeed from "../Components/DiscoverFeed/DiscoverFeed";
 import { Octokit } from "octokit";
 
-const username = process.env.USERNAME;
-const token = process.env.GITHUB_TOKEN;
 const octokit = new Octokit({
-  auth: token,
+  auth: process.env.REACT_APP_GITHUB_TOKEN,
 });
 
 const ProjectsPage = () => {
@@ -22,9 +20,12 @@ const ProjectsPage = () => {
   const [projects, setProjects] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
   React.useEffect(() => {
+    console.log(process.env);
     const getRepos = async () => {
       setIsLoading(true);
-      const { data } = await octokit.request(`GET /users/${username}/repos`);
+      const { data } = await octokit.request(
+        `GET /users/${process.env.REACT_APP_USERNAME}/repos`
+      );
       setProjects(data);
       setIsLoading(false);
     };
