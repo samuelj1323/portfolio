@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d853a56b.css",
+    "main.js": "/static/js/main.856af752.js",
+    "static/js/787.a9120f67.chunk.js": "/static/js/787.a9120f67.chunk.js",
+    "static/media/current_headshot.png": "/static/media/current_headshot.3b3dcc35f1e1330038bc.png",
+    "static/media/jets.jpg": "/static/media/jets.95bffbbd80a3ba10dfa4.jpg",
+    "static/media/react_image_2.png": "/static/media/react_image_2.ee618307265038b97d52.png",
+    "static/media/headshot_rect.png": "/static/media/headshot_rect.0f77717cb7ac9f23e13a.png",
+    "static/media/spring.webp": "/static/media/spring.5eed044bfab605275522.webp",
+    "static/media/jenkins_cons.jpg": "/static/media/jenkins_cons.8e537d368370aed5c65e.jpg",
+    "static/media/theseasonsBetter.woff": "/static/media/theseasonsBetter.d26aaf2a275ba41f0853.woff",
+    "static/media/pytorch.png": "/static/media/pytorch.2aaa762785e20b4bf49f.png",
+    "static/media/python_icon.webp": "/static/media/python_icon.1a722849560638ec2edf.webp",
+    "index.html": "/index.html",
+    "main.d853a56b.css.map": "/static/css/main.d853a56b.css.map",
+    "main.856af752.js.map": "/static/js/main.856af752.js.map",
+    "787.a9120f67.chunk.js.map": "/static/js/787.a9120f67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d853a56b.css",
+    "static/js/main.856af752.js"
+  ]
+}
