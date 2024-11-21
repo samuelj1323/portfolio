@@ -11,13 +11,13 @@ import {
 import DiscoverFeed from "../Components/DiscoverFeed/DiscoverFeed";
 import { Octokit } from "octokit";
 
+const username = process.env.USERNAME;
 const token = process.env.GITHUB_TOKEN;
 const octokit = new Octokit({
   auth: token,
 });
 
 const ProjectsPage = () => {
-  const username = process.env.USERNAME;
   const theme = useTheme();
   const [projects, setProjects] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
