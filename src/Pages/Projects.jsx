@@ -20,7 +20,6 @@ const ProjectsPage = () => {
   const [projects, setProjects] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
   React.useEffect(() => {
-    console.log(process.env);
     const getRepos = async () => {
       setIsLoading(true);
       const { data } = await octokit.request(
