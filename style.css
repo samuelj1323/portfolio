@@ -1,0 +1,529 @@
+:root {
+  --background-color: #1a1d24; /* Dark Blue/Gray */
+  --text-color: #e0e0e0; /* Light Gray */
+  --primary-color: #2b303b; /* Slightly Lighter Dark */
+  --accent-color: #00e0ff; /* Vibrant Teal */
+  --secondary-text: #bcbcbc; /* Medium Gray - ADJUSTED FOR CONTRAST */
+  --border-color: #444;
+  --focus-outline-color: #00e0ff; /* Use accent for focus */
+}
+
+/* Light Mode Variables */
+body.light-mode {
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --primary-color: #fff;
+  --accent-color: #0099cc;
+  --secondary-text: #666;
+  --border-color: #ddd;
+  --focus-outline-color: #0099cc;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* Apply Poppins font */
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 0; /* Remove default padding */
+  font-weight: 300;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  /* Added :focus */
+  color: #ffffff; /* Lighter teal/white on hover/focus */
+  text-decoration: none; /* Keep underline off for modern look */
+  outline: none; /* Remove default browser outline if adding custom */
+}
+
+a:focus-visible {
+  /* Style specifically for keyboard focus */
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1.5rem 0;
+  /* text-align: center; */ /* Remove center align for flexbox */
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+header nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Pushes logo/name and links apart */
+  align-items: center;
+}
+
+header .logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  background: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.logo-text:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 224, 255, 0.2);
+}
+
+.logo-accent {
+  color: var(--accent-color);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex; /* Align nav items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+header nav ul li {
+  /* display: inline; */ /* Remove inline */
+  margin-left: 25px; /* Spacing between nav items */
+  display: flex;
+  align-items: center;
+}
+
+/* Make the last nav item (theme toggle) more visible */
+header nav ul li:last-child {
+  margin-left: 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400; /* Regular weight */
+  font-size: 1rem;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after,
+header nav ul li a:focus::after {
+  /* Added :focus */
+  width: 100%;
+  left: 0;
+  background-color: var(--accent-color);
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  /* Added :focus */
+  color: var(--accent-color);
+  text-decoration: none; /* Remove underline */
+}
+
+main {
+  max-width: 960px;
+  margin: 30px auto; /* Add top/bottom margin */
+  background: var(--primary-color); /* Darker background for main content */
+  padding: 30px 40px; /* Increase padding */
+  border-radius: 8px; /* Smoother radius */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700; /* Bold */
+  color: #fff; /* White for main headings */
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  display: inline-block; /* Make border only width of text */
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff; /* White for section headings */
+  margin-top: 2.5rem; /* More space above section headings */
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 10px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+#contact {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color); /* Darker border */
+}
+
+#contact p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Resume Page Specifics */
+#resume section {
+  margin-bottom: 2.5rem;
+}
+
+#resume article.job {
+  margin-bottom: 1.5rem;
+  padding-left: 15px;
+  border-left: 2px solid var(--border-color);
+}
+
+#resume article.job p strong {
+  font-weight: 400; /* Regular weight for company/dates */
+  color: var(--secondary-text);
+}
+
+#resume ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 0.5rem;
+}
+
+#resume ul li {
+  margin-bottom: 0.5rem;
+}
+
+#skills p {
+  margin-bottom: 0.5rem;
+}
+
+#skills p strong {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Projects Page Specifics */
+#projects article.project {
+  background-color: #252931; /* Slightly different dark for cards */
+  padding: 20px;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--accent-color);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#projects article.project:hover,
+#projects article.project:focus-within {
+  /* Added :focus-within for container focus */
+  box-shadow: 0 8px 20px rgba(0, 224, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+#projects article.project h2 {
+  border-left: none; /* Remove default h2 border */
+  padding-left: 0;
+  margin-top: 0; /* Reset margin */
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem; /* Slightly smaller for project titles */
+  color: var(--accent-color);
+}
+
+#projects article.project p {
+  margin-bottom: 0.8rem;
+}
+
+#projects article.project p strong {
+  font-weight: 600;
+}
+
+#projects article.project a {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#projects article.project a:hover,
+#projects article.project a:focus {
+  /* Added :focus */
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  outline: none; /* Handled by focus-visible on parent usually, or add specific outline */
+}
+
+footer {
+  text-align: center;
+  margin: 4rem auto 2rem auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--secondary-text);
+  max-width: 960px;
+}
+
+/* --- Animations --- */
+
+/* Wrap animations in prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  /* Bar Animation */
+  #hero-animation-container {
+    height: 60px; /* Adjust height as needed */
+    margin: 2rem 0; /* Space above and below */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align bars to the bottom */
+    gap: 8px; /* Space between bars */
+  }
+
+  .anim-bar {
+    display: block;
+    width: 10px; /* Width of each bar */
+    height: 0; /* Start with no height */
+    background-color: var(--accent-color);
+    animation: growBar 0.5s ease-out forwards;
+    border-radius: 2px; /* Slightly rounded tops */
+  }
+
+  /* Stagger the animation */
+  .anim-bar:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .anim-bar:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .anim-bar:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .anim-bar:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .anim-bar:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+
+  @keyframes growBar {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: 50px; /* Final height */
+      opacity: 1;
+    }
+  }
+
+  /* Existing Text/Contact Animations - Adjusted Delays */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animated-heading {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0; /* Start hidden */
+  }
+
+  .animated-text {
+    animation: fadeIn 1s ease-out 1.2s forwards; /* Increased Delay */
+    opacity: 0; /* Start hidden */
+  }
+
+  .animated-contact {
+    animation: fadeIn 1s ease-out 1.6s forwards; /* Increased Delay */
+    opacity: 0; /* Start hidden */
+  }
+} /* End of prefers-reduced-motion */
+
+/* Add more specific styles as needed */
+
+/* Theme Toggle Button */
+#theme-toggle {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+#theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+body.light-mode #theme-toggle {
+  color: #0099cc;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  padding: 6px 12px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border-color: var(--accent-color);
+}
+
+/* Scrolled Header */
+header.scrolled {
+  padding: 0.8rem 0;
+  background-color: rgba(43, 48, 59, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.light-mode header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Typing Cursor Animation */
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Light Mode Adjustments */
+body.light-mode main {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode #projects article.project {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode #projects article.project:hover {
+  box-shadow: 0 5px 15px rgba(0, 153, 204, 0.1);
+}
+
+body.light-mode h1,
+body.light-mode h2 {
+  color: #333;
+}
+
+body.light-mode h3 {
+  color: var(--accent-color);
+}
+
+body.light-mode header {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+body.light-mode header nav ul li a {
+  color: #333;
+}
+
+body.light-mode header nav ul li a:hover,
+body.light-mode header nav ul li a:focus {
+  color: var(--accent-color);
+}
+
+body.light-mode .logo-text {
+  border: 2px solid var(--accent-color);
+  color: #333;
+}
+
+body.light-mode footer {
+  color: #666;
+}
