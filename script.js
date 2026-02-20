@@ -1,189 +1,132 @@
-// Dark/Light Mode Toggle
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM loaded, initializing theme toggle");
+  initThemeToggle();
+  initScrollHeader();
+  initMobileMenu();
+  initScrollReveal();
+
+  if (document.querySelector("#project-filters")) {
+    initProjectFilters();
+  }
+});
+
+function initThemeToggle() {
   const toggleBtn = document.getElementById("theme-toggle");
-  const toggleIcon = toggleBtn ? toggleBtn.querySelector("i") : null;
+  const toggleIcon = toggleBtn?.querySelector("i");
+  if (!toggleBtn || !toggleIcon) return;
 
-  console.log("Toggle button found:", !!toggleBtn);
-
-  // Function to update icon based on current theme
-  function updateThemeIcon(isDark) {
-    if (toggleIcon) {
-      console.log("Updating icon to:", isDark ? "moon" : "sun");
-      if (isDark) {
-        toggleIcon.classList.remove("fa-sun");
-        toggleIcon.classList.add("fa-moon");
-      } else {
-        toggleIcon.classList.remove("fa-moon");
-        toggleIcon.classList.add("fa-sun");
-      }
-    }
-  }
-
-  // Function to update theme
-  function setTheme(isDark) {
-    console.log("Setting theme to:", isDark ? "dark" : "light");
-    if (isDark) {
-      document.body.classList.remove("light-mode");
-    } else {
-      document.body.classList.add("light-mode");
-    }
+  function applyTheme(isDark) {
+    document.body.classList.toggle("light-mode", !isDark);
+    toggleIcon.classList.toggle("fa-moon", isDark);
+    toggleIcon.classList.toggle("fa-sun", !isDark);
     localStorage.setItem("darkMode", isDark);
-    updateThemeIcon(isDark);
   }
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", function () {
-      const isDark = document.body.classList.contains("light-mode")
-        ? false
-        : true;
-      console.log("Current mode before toggle:", isDark ? "dark" : "light");
-      setTheme(!isDark); // Toggle the current state
+  toggleBtn.addEventListener("click", () => {
+    const currentlyDark = !document.body.classList.contains("light-mode");
+    applyTheme(!currentlyDark);
+  });
+
+  const saved = localStorage.getItem("darkMode");
+  applyTheme(saved !== null ? saved === "true" : true);
+}
+
+function initScrollHeader() {
+  const header = document.querySelector("header");
+  if (!header) return;
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        header.classList.toggle("scrolled", window.scrollY > 20);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
+function initMobileMenu() {
+  const toggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (!toggle || !navLinks) return;
+
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    navLinks.classList.toggle("open");
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      toggle.classList.remove("active");
+      navLinks.classList.remove("open");
     });
-  }
-
-  // Check saved preference
-  const savedDarkMode = localStorage.getItem("darkMode");
-  console.log("Saved dark mode preference:", savedDarkMode);
-
-  if (savedDarkMode !== null) {
-    setTheme(savedDarkMode === "true");
-  } else {
-    // Default to dark mode if no preference is saved
-    setTheme(true);
-  }
-});
-
-// Smooth Scroll for Navigation
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href");
-    if (targetId !== "#") {
-      e.preventDefault();
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-        });
-      }
-    }
   });
-});
+}
 
-// Project Filter by Technology
-function setupProjectFilters() {
-  // Get all technologies from projects
+function initScrollReveal() {
+  const prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  if (prefersReduced) return;
+
+  const elements = document.querySelectorAll(".reveal-up");
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, index * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+}
+
+function initProjectFilters() {
+  const container = document.getElementById("project-filters");
+  const cards = document.querySelectorAll(".project-card");
+  if (!container || !cards.length) return;
+
   const techSet = new Set();
-  document.querySelectorAll(".project p strong").forEach((tech) => {
-    if (tech.textContent.startsWith("Technologies used:")) {
-      tech.textContent
-        .replace("Technologies used:", "")
-        .split(",")
-        .map((t) => t.trim())
-        .forEach((t) => techSet.add(t));
+  cards.forEach((card) => {
+    const techs = card.dataset.tech;
+    if (techs) {
+      techs.split(",").forEach((t) => techSet.add(t.trim()));
     }
   });
 
-  // Create filter buttons
-  const filterContainer = document.createElement("div");
-  filterContainer.className = "filter-buttons";
-  filterContainer.innerHTML =
-    '<button class="active" data-filter="all">All</button>';
-
+  container.innerHTML = '<button class="active" data-filter="all">All</button>';
   techSet.forEach((tech) => {
     if (tech) {
-      filterContainer.innerHTML += `<button data-filter="${tech}">${tech}</button>`;
+      const btn = document.createElement("button");
+      btn.dataset.filter = tech;
+      btn.textContent = tech;
+      container.appendChild(btn);
     }
   });
 
-  // Insert before projects
-  const projectsHeading = document.querySelector("#projects h1");
-  if (projectsHeading) {
-    const projectsContainer = projectsHeading.nextElementSibling;
-    if (projectsContainer) {
-      projectsContainer.parentNode.insertBefore(
-        filterContainer,
-        projectsContainer.nextSibling
-      );
+  container.addEventListener("click", (e) => {
+    const btn = e.target.closest("button");
+    if (!btn) return;
 
-      // Add filter functionality
-      document.querySelectorAll(".filter-buttons button").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const filter = btn.dataset.filter;
+    container
+      .querySelectorAll("button")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
 
-          document
-            .querySelectorAll(".filter-buttons button")
-            .forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-
-          document.querySelectorAll(".project").forEach((project) => {
-            if (filter === "all") {
-              project.style.display = "block";
-            } else {
-              const techElement = project.querySelector("p strong");
-              if (techElement && techElement.textContent) {
-                const techs = techElement.textContent;
-                project.style.display = techs.includes(filter)
-                  ? "block"
-                  : "none";
-              }
-            }
-          });
-        });
-      });
-    }
-  }
+    const filter = btn.dataset.filter;
+    cards.forEach((card) => {
+      const match =
+        filter === "all" || (card.dataset.tech && card.dataset.tech.includes(filter));
+      card.style.display = match ? "" : "none";
+    });
+  });
 }
-
-// Typing Animation for Welcome Message
-function setupTypingEffect() {
-  const element = document.querySelector(".animated-heading");
-  if (!element) return;
-
-  const text = element.textContent;
-  element.innerHTML = '<span class="cursor">|</span>';
-
-  let i = 0;
-  const speed = 100;
-
-  function typeWriter() {
-    if (i < text.length) {
-      element.innerHTML =
-        text.substring(0, i + 1) + '<span class="cursor">|</span>';
-      i++;
-      setTimeout(typeWriter, speed);
-    } else {
-      // Remove cursor after typing is complete
-      setTimeout(() => {
-        element.innerHTML = text;
-      }, 1000);
-    }
-  }
-
-  typeWriter();
-}
-
-// Navbar Scroll Effect
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  if (header) {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  }
-});
-
-// Run page-specific scripts
-document.addEventListener("DOMContentLoaded", () => {
-  // Run on projects page only
-  if (document.querySelector("#projects")) {
-    setupProjectFilters();
-  }
-
-  // Run on home page
-  if (document.querySelector("#about")) {
-    setupTypingEffect();
-  }
-});

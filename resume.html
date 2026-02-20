@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume - Samuel Mahan</title>
+    <title>Resume — Samuel Mahan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link
@@ -19,15 +19,16 @@
   <body>
     <header>
       <nav>
-        <div class="logo">
-          <a href="index.html">
-            <span class="logo-text"><span class="logo-accent">S</span>M</span>
-          </a>
-        </div>
-        <ul>
+        <a href="index.html" class="logo">sm<span class="logo-dot">.</span></a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
           <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
           <li>
             <button id="theme-toggle" aria-label="Toggle dark/light mode">
               <i class="fas fa-moon"></i>
@@ -37,101 +38,141 @@
       </nav>
     </header>
 
-    <main id="resume">
-      <h1>Resume</h1>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <article class="job">
-          <h3>Software Engineer</h3>
-          <p><strong>JP Morgan Chase</strong> | July 2022 – Present</p>
-          <ul>
-            <li>
-              Led cloud-native front-end architecture enhancements using Module
-              Federation, reducing development time by 75%.
-            </li>
-            <li>
-              Developed and maintained full-stack features for 9 applications
-              using React, Spring.
-            </li>
-            <li>
-              Mentored 3 engineers in React and Spring frameworks, implementing
-              Agile and CI/CD practices to optimize project delivery timelines.
-            </li>
-            <li>
-              Demonstrated end-to-end product expertise by proactively
-              identifying and resolving critical technical issues.
-            </li>
-          </ul>
-        </article>
-        <article class="job">
-          <h3>Application Support Intern</h3>
-          <p>
-            <strong>Apex Fintech Solutions</strong> | June 2021 – August 2021
-          </p>
-          <ul>
-            <li>
-              Developed a Python automation tool integrating Jira and Microsoft
-              SQL Server to streamline client onboarding, resulting in a 13%
-              annual productivity increase.
-            </li>
-            <li>
-              Identified and proposed automation solutions across multiple
-              departments, leveraging technical expertise and cross-functional
-              collaboration.
-            </li>
-            <li>
-              Adapted to evolving project requirements by implementing agile
-              development methodologies, ensuring successful and timely delivery
-              of the automation solution.
-            </li>
-          </ul>
-        </article>
-        <article class="job">
-          <h3>Mobile App Intern</h3>
-          <p><strong>Andon Specialties</strong> | June 2020 – June 2021</p>
-          <ul>
-            <li>
-              Developed a cross-platform mobile application using React Native
-              to enhance company operations.
-            </li>
-            <li>
-              Translated business requirements into technical specifications by
-              collaborating with management and development teams.
-            </li>
-            <li>
-              Independently researched and implemented mobile development
-              technologies throughout the project lifecycle.
-            </li>
-          </ul>
-        </article>
+    <main>
+      <section class="page-header">
+        <h1 class="reveal">Resume<span class="accent-dot">.</span></h1>
       </section>
 
-      <section id="education">
-        <h2>Education</h2>
-        <p><strong>Bachelors of Science in Computer Science</strong></p>
-        <p>
-          Texas A&M University, College Station, Texas | Graduation: May 2022
-        </p>
+      <section class="resume-section reveal-fade">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Software Engineer</h3>
+                <span class="timeline-date">July 2022 — Present</span>
+              </div>
+              <p class="timeline-company">JP Morgan Chase</p>
+              <ul>
+                <li>
+                  Led cloud-native front-end architecture enhancements using Module
+                  Federation, reducing development time by 75%.
+                </li>
+                <li>
+                  Developed and maintained full-stack features for 9 applications
+                  using React and Spring.
+                </li>
+                <li>
+                  Mentored 3 engineers in React and Spring frameworks, implementing
+                  Agile and CI/CD practices to optimize project delivery timelines.
+                </li>
+                <li>
+                  Demonstrated end-to-end product expertise by proactively
+                  identifying and resolving critical technical issues.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Application Support Intern</h3>
+                <span class="timeline-date">June 2021 — Aug 2021</span>
+              </div>
+              <p class="timeline-company">Apex Fintech Solutions</p>
+              <ul>
+                <li>
+                  Developed a Python automation tool integrating Jira and Microsoft
+                  SQL Server to streamline client onboarding, resulting in a 13%
+                  annual productivity increase.
+                </li>
+                <li>
+                  Identified and proposed automation solutions across multiple
+                  departments, leveraging technical expertise and cross-functional
+                  collaboration.
+                </li>
+                <li>
+                  Adapted to evolving project requirements by implementing agile
+                  development methodologies, ensuring timely delivery.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Mobile App Intern</h3>
+                <span class="timeline-date">June 2020 — June 2021</span>
+              </div>
+              <p class="timeline-company">Andon Specialties</p>
+              <ul>
+                <li>
+                  Developed a cross-platform mobile application using React Native
+                  to enhance company operations.
+                </li>
+                <li>
+                  Translated business requirements into technical specifications by
+                  collaborating with management and development teams.
+                </li>
+                <li>
+                  Independently researched and implemented mobile development
+                  technologies throughout the project lifecycle.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>
-          <strong>Front-End/ Mobile Technologies:</strong> React, TypeScript,
-          JavaScript (ES6+), HTML, CSS, Next.js, Micro Frontends, Module
-          Federation, React Native
-        </p>
-        <p>
-          <strong>General:</strong> Git, Agile methodologies, RESTful APIs,
-          Testing, OPA policies, AWS Lambda, Google Firebase, AWS Cloud
-          Practitioner Cert.
-        </p>
+      <section class="resume-section reveal-fade">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="education-card">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p class="timeline-company">Texas A&amp;M University, College Station, Texas</p>
+          <span class="timeline-date">Graduated May 2022</span>
+        </div>
+      </section>
+
+      <section class="resume-section reveal-fade">
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="skills-group">
+          <h3>Front-End &amp; Mobile</h3>
+          <div class="skill-tags">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>JavaScript (ES6+)</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Next.js</span>
+            <span>Micro Frontends</span>
+            <span>Module Federation</span>
+            <span>React Native</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h3>General</h3>
+          <div class="skill-tags">
+            <span>Git</span>
+            <span>Agile</span>
+            <span>RESTful APIs</span>
+            <span>Testing</span>
+            <span>OPA Policies</span>
+            <span>AWS Lambda</span>
+            <span>Google Firebase</span>
+            <span>AWS Cloud Practitioner</span>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Samuel Mahan</p>
+      <p>&copy; 2026 Samuel Mahan</p>
     </footer>
 
     <script src="script.js"></script>

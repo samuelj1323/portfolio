@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Samuel Mahan</title>
+    <title>Samuel Mahan — Front-End Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link
@@ -19,15 +19,16 @@
   <body>
     <header>
       <nav>
-        <div class="logo">
-          <a href="index.html">
-            <span class="logo-text"><span class="logo-accent">S</span>M</span>
-          </a>
-        </div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
+        <a href="index.html" class="logo">sm<span class="logo-dot">.</span></a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
           <li>
             <button id="theme-toggle" aria-label="Toggle dark/light mode">
               <i class="fas fa-moon"></i>
@@ -37,39 +38,45 @@
       </nav>
     </header>
 
-    <main id="about">
-      <h1 class="animated-heading">Welcome!</h1>
-      <p class="animated-text">
-        Product focused Front-End Engineer with extensive experience building
-        performant and user-friendly web applications. Proven ability to develop
-        and maintain complex front-end architectures using React, TypeScript,
-        and modern JavaScript frameworks. A proactive team leader with a strong
-        focus on product quality and best practices, possessing experience in
-        both mobile and full-stack development.
-      </p>
-
-      <section id="contact" class="animated-contact">
-        <h2>Contact</h2>
-        <p>
-          Email:
-          <a href="mailto:samuelj1323@gmail.com">samuelj1323@gmail.com</a> |
-          Phone: 281-961-1887 | GitHub:
-          <a href="https://github.com/samuelj1323" target="_blank"
-            >samuelj1323</a
-          >
-          | LinkedIn:
-          <a href="https://www.linkedin.com/in/samuelj1323/" target="_blank"
-            >samuelj1323</a
-          >
+    <main>
+      <section class="hero">
+        <div class="hero-label">Front-End Engineer</div>
+        <h1>
+          <span class="reveal">Samuel</span>
+          <span class="reveal">Mahan<span class="accent-dot">.</span></span>
+        </h1>
+        <p class="hero-description reveal-fade">
+          Product-focused engineer with extensive experience building performant,
+          user-friendly web applications. Proven ability to develop and maintain
+          complex front-end architectures using React, TypeScript, and modern
+          JavaScript frameworks.
         </p>
+        <div class="hero-cta reveal-fade">
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="resume.html" class="btn btn-outline">Resume</a>
+        </div>
+      </section>
+
+      <section class="contact-bar reveal-fade">
+        <a href="mailto:samuelj1323@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i>
+          <span>samuelj1323@gmail.com</span>
+        </a>
+        <a href="https://github.com/samuelj1323" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/samuelj1323/" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <i class="fab fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+        </a>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Samuel Mahan</p>
+      <p>&copy; 2026 Samuel Mahan</p>
     </footer>
 
     <script src="script.js"></script>
-    <!-- Optional: for interactivity later -->
   </body>
 </html>
