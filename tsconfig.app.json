@@ -10,9 +10,9 @@
 
     "paths": {
       "$utils/*": ["./src/lib/utils/*"],
-      "$hooks/*": ["./src/lib/hooks"],
-      "$components/*": ["./src/lib/components"],
-      "$types/*": ["./src/lib/types"],
+      "$hooks/*": ["./src/lib/hooks/*"],
+      "$components/*": ["./src/lib/components/*"],
+      "$types/*": ["./src/lib/types/*"],
     },
 
     /* Bundler mode */
