@@ -4,7 +4,7 @@ export type Routes = readonly Route[];
 
 // resume
 
-// skills — curated grouped taxonomy (see constants.ts)
+// skills — curated grouped taxonomy (see skills.ts)
 export type SkillCategory =
   | "frontend"
   | "backend"

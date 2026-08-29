@@ -1,6 +1,6 @@
 import styles from "./home.module.css";
 import useTypedNavigate from "$hooks/useTypedNavigate";
-import { skills } from "$utils/constants";
+import { skills } from "$utils/skills";
 import { projects } from "$utils/projects";
 import Skill from "$components/skill/Skill";
 import Project from "$components/project/Project";
