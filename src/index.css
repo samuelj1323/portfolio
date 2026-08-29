@@ -1,112 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+:root {
+  --text: black;
+  --text-h: #08060d;
+  --bg: #ccc9a1;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #a53f2b;
+  --accent-bg: #4c230a;
+  --accent-border:#280004;
+  --social-bg: #F0FFCE;
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 
-@font-face {
-  font-family: "the-seasons";
-  src: url("./fonts//theseasonsBetter.woff");
-}
-.image-container {
-  width: 200px; /* or any other size */
-  height: 200px; /* maintain aspect ratio */
-  position: relative;
-}
-.image-container img {
-  position: absolute;
-  width: 120%;
-  left: -10%;
-  top: -50%;
-  z-index: 10;
-}
-.circle-container {
-  width: 280px; /* Diameter of the circle */
-  height: 300px; /* Diameter of the circle */
-  overflow: hidden; /* Hides the overflow part of the image */
-  position: relative;
-  display: flex;
-  justify-content: center;
-  box-shadow: 10%;
-  align-items: center; /* Optional: if you want a border around the circle */
-}
-.headshot {
-  position: absolute;
-  width: auto; /* Maintain aspect ratio */
-  height: 120%; /* Height greater than the container to create the popping-out effect */
-  z-index: 10;
-  top: -20px;
-}
-.oval-image img {
-  transform: rotate(-30deg);
-}
-.sub-blurb {
-  background-color: inherit;
-  border-color: white;
-  color: white;
-  border-radius: 5px;
-  width: 100px;
-}
 
-.image-vert-container {
-  width: 100%; /* or any other size */
-  height: auto; /* maintain aspect ratio */
-  clip-path: ellipse(40% 45% at 60% 50%);
-}
-
-.project-card {
-  display: flex;
-  background-color: grey;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  border: 1px solid #ccc;
+#root {
+  width: 100%;
+  font-family: "Schibsted Grotesk", sans-serif;
+  margin: 0 auto;
   text-align: center;
-  height: 300px;
-  transition: background-color 0.2s ease-in-out;
-}
-.project-card:hover {
-  background-color: darkgrey;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  border-inline: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-.app {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0.4;
-  background-image: radial-gradient(
-    var(--brand-on-background-weak) 0.5px,
-    var(--static-transparent) 0.5px
-  );
-  background-size: var(--static-space-24) var(--static-space-24);
-  mask-image: radial-gradient(
-    600px at 1116px 298px,
-    rgb(0, 0, 0) 20%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  mask-size: 100% 100%;
+body {
+  margin: 0;
 }
 
-#tsparticles canvas {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  z-index: -1; /* Set a negative z-index to place it behind the content */
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+
+p {
+  margin: 0;
 }
