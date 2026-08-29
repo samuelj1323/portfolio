@@ -10,6 +10,9 @@ export type SkillCategory =
   | "backend"
   | "data"
   | "infra"
+  | "ai"
+  | "accessibility"
+  | "soft"
   | "languages"
   | "tooling";
 
