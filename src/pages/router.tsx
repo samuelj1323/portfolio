@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import HomePage from "./home/container/home-page";
+import HomePage from "./home";
 import NavBar from "$components/nav-bar/nav-bar";
 
 const Router = () => {

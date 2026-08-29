@@ -1,13 +1,13 @@
 import type { Route } from "$utils/types";
 import { routeMappings } from "$utils/constants";
-import { useNavigate } from "react-router";
+import useTypedNavigate from "$hooks/useTypedNavigate";
 
 type NavItemProps = {
   route: Route;
 };
 
 const NavItem = ({ route }: NavItemProps) => {
-  const nav = useNavigate();
+  const nav = useTypedNavigate();
   const name = routeMappings[route];
   const handleNavigation = () => {
     nav(route);
