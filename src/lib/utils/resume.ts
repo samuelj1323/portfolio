@@ -7,6 +7,7 @@ import type { Resume } from "./types";
  */
 export const resume: Resume = [
   {
+    type: "project",
     projectName: "FairShares — fairshares.app",
     date: new Date("2025-01-01"),
     points: [
@@ -28,6 +29,7 @@ export const resume: Resume = [
     ],
   },
   {
+    type: "company",
     companyName: "JPMorgan Chase",
     experience: [
       {
@@ -55,6 +57,7 @@ export const resume: Resume = [
     ],
   },
   {
+    type: "education",
     schoolName: "Texas A&M University",
     location: "College Station, TX",
     degree: "BS in Computer Science",

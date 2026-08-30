@@ -82,6 +82,7 @@ export type Resume = ResumeItem[];
 
 /** Standalone featured project (e.g. FairShares hero). */
 export type ProjectItem = {
+  type: "project";
   /** Project display name. */
   projectName: string;
   /** Featured date/beta window. */
@@ -94,6 +95,7 @@ export type ProjectItem = {
 
 /** Education block (Texas A&M → BS CS). */
 export type EducationItem = {
+  type: "education";
   /** Institution. */
   schoolName: string;
   /** City, State. */
@@ -104,29 +106,19 @@ export type EducationItem = {
 
 /** Employment block (JPMorgan Chase). */
 export type CompanyItem = {
+  type: "company";
   /** Employer. */
   companyName: string;
 
   /** For the job related experiences */
-  experience:
-    | Array<{
-        /** Role title. */
-        jobTitle: string;
-        /** Inclusive start. */
-        startDate: Date;
-        /** Undefined = present. */
-        endDate?: Date;
-        /** Impact bullets for the tenure. */
-        points: string[];
-      }>
-    | {
-        /** Role title. */
-        jobTitle: string;
-        /** Inclusive start. */
-        startDate: Date;
-        /** Undefined = present. */
-        endDate?: Date;
-        /** Impact bullets for the tenure. */
-        points: string[];
-      };
+  experience: Array<{
+    /** Role title. */
+    jobTitle: string;
+    /** Inclusive start. */
+    startDate: Date;
+    /** Undefined = present. */
+    endDate?: Date;
+    /** Impact bullets for the tenure. */
+    points: string[];
+  }>;
 };
