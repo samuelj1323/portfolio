@@ -1,9 +1,18 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, type LazyExoticComponent, type JSX } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import NavBar from "$components/nav-bar/nav-bar";
+import { routes } from "$utils/constants";
+import type { Route as AppRoute } from "$utils/types";
 
 const HomePage = lazy(() => import("./home"));
 const ResumePage = lazy(() => import("./resume"));
+
+const RouteHash: Partial<
+  Record<AppRoute, LazyExoticComponent<() => JSX.Element>>
+> = {
+  "/": HomePage,
+  "/resume": ResumePage,
+};
 
 const Router = () => {
   return (
@@ -11,10 +20,11 @@ const Router = () => {
       <NavBar />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<h2>about</h2>} />
-          <Route path="/blog" element={<h2>blog</h2>} />
-          <Route path="/resume" element={<ResumePage />} />
+          {routes.map((route: AppRoute) => {
+            const El = RouteHash[route];
+            if (!El) return null;
+            return <Route key={route} path={route} element={<El />} />;
+          })}
         </Routes>
       </Suspense>
     </BrowserRouter>
