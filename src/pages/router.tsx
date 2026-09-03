@@ -20,7 +20,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <NavBar />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "60vh", fontSize: "0.875rem", opacity: 0.6 }}>Loading...</div>}>
         <Routes>
           {routes.map((route: AppRoute) => {
             const El = RouteHash[route];

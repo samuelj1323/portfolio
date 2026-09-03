@@ -8,7 +8,7 @@ const HomePage = () => {
   const nav = useTypedNavigate();
 
   const handleConnectClick = () => {
-    nav("/resume");
+    nav("/about");
   };
   return (
     <main>

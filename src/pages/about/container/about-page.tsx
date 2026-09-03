@@ -6,6 +6,15 @@ const AboutPage = () => {
       <header className={styles.header}>
         <h3>About</h3>
         <p>Frontend-leaning full-stack developer — performance, accessibility, and shipping real products.</p>
+        <div className={styles.contacts}>
+          <a href="mailto:samuelj1323@gmail.com">samuelj1323@gmail.com</a>
+          <a href="https://github.com/samuelj1323" target="_blank" rel="noreferrer">
+            github.com/samuelj1323
+          </a>
+          <a href="https://linkedin.com/in/samuel-mahan" target="_blank" rel="noreferrer">
+            linkedin.com/in/samuel-mahan
+          </a>
+        </div>
       </header>
 
       <section className={styles.section}>

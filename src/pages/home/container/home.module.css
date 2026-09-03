@@ -5,8 +5,15 @@
 }
 
 .scuffed {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 3.5rem 0 2.5rem;
     border-bottom: 1px solid var(--border);
+}
+
+.scuffed button {
+    align-self: flex-end;
 }
 
 .scuffed h2 {
