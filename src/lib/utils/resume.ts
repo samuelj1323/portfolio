@@ -57,6 +57,20 @@ export const resume: Resume = [
     ],
   },
   {
+    type: "company",
+    companyName: "Apex Fintech Solutions",
+    experience: [
+      {
+        jobTitle: "Intern",
+        startDate: new Date("2021-06-01"),
+        endDate: new Date("2021-08-31"),
+        points: [
+          "Developed a Python automation tool integrating Jira and Microsoft SQL Server to streamline client onboarding, resulting in a 13% annual productivity increase.",
+        ],
+      },
+    ],
+  },
+  {
     type: "education",
     schoolName: "Texas A&M University",
     location: "College Station, TX",
