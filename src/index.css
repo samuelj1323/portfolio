@@ -2,13 +2,11 @@
     /*Colors */
     --text: black;
     --bg: #fbf5f3;
-    --accent-green: #248232;
-    --accent-blue: #0e273c;
-    --accent-red: #d80032;
     --accent-yellow: #d19c1d;
     --border: black;
 
     /*Font*/
+    --font-base: "Ubuntu", sans-serif;
     --font-size-xs: 0.75rem; /* 12px */
     --font-size-sm: 0.875rem; /* 14px */
     --font-size-base: 1rem; /* 16px */
@@ -31,9 +29,6 @@
     --letter-spacing-normal: 0;
     --letter-spacing-wide: 0.02em;
 
-    --font-title: "Special Elite", system-ui;
-    --font-base: "Red Hat Display", sans-serif;
-
     /*Font*/
     font-family: var(--font-base);
     font-weight: 400;
@@ -47,6 +42,54 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-light-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -54,7 +97,7 @@
 h1,
 h2,
 h3 {
-    font-family: var(--font-title);
+    font-family: "Ubuntu", sans-serif;
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
