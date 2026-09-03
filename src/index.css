@@ -94,24 +94,113 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
     font-family: "Ubuntu", sans-serif;
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--font-size-3xl);
+}
+h2 {
+    font-size: var(--font-size-2xl);
+}
+h3 {
+    font-size: var(--font-size-lg);
+    text-transform: capitalize;
+}
+h4 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+h5 {
+    font-size: var(--font-size-base);
+}
+
+p {
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+    opacity: 0.85;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 body {
     margin: 0;
 }
+
 main {
-    margin: 1rem;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
 }
 
 #root {
     width: 100%;
     margin: 0 auto;
     text-align: left;
+}
+
+button {
+    font-family: var(--font-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.02em;
+    background: var(--accent-yellow);
+    color: var(--text);
+    border: 1px solid var(--accent-yellow);
+    padding: 0.7rem 1.4rem;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        color 0.15s,
+        border-color 0.15s,
+        transform 0.1s;
+}
+
+button:hover {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+small {
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.02em;
+    opacity: 0.6;
+    line-height: var(--line-height-normal);
 }

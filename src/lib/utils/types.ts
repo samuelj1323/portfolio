@@ -1,6 +1,6 @@
 // ── Routing ──
 /** Discrete portfolio routes; add new paths here and in `constants.ts:3` `routes`. */
-export type Route = "/" | "/about" | "/blog" | "/resume";
+export type Route = "/" | "/about" | "/resume";
 /** Readonly tuple of allowed routes — used with `as const satisfies Routes`. */
 export type Routes = readonly Route[];
 

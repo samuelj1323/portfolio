@@ -1,0 +1,114 @@
+.block {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 12%, transparent);
+}
+
+.block:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.block h6 {
+    font-size: var(--font-size-lg);
+    margin-bottom: 0.25rem;
+}
+
+.meta {
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 1rem;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.points p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    opacity: 0.85;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.points p::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    opacity: 0.4;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.tags span {
+    font-size: var(--font-size-xs);
+    padding: 0.3rem 0.6rem;
+    border: 1px solid color-mix(in srgb, var(--border) 18%, transparent);
+    border-radius: 999px;
+    line-height: 1;
+}
+
+.tags span:hover {
+    border-color: var(--accent-yellow);
+    background: color-mix(in srgb, var(--accent-yellow) 12%, transparent);
+}
+
+/* Company */
+.role {
+    margin-bottom: 1.5rem;
+}
+
+.role:last-child {
+    margin-bottom: 0;
+}
+
+.roleTitle {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 0.15rem;
+}
+
+.roleDate {
+    font-size: var(--font-size-xs);
+    opacity: 0.55;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.6rem;
+}
+
+.role ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1rem;
+}
+
+.role li {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    opacity: 0.85;
+    position: relative;
+}
+
+.role li::before {
+    content: "•";
+    position: absolute;
+    left: -0.75rem;
+    color: var(--accent-yellow);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Education */
+.edu p {
+    font-size: var(--font-size-sm);
+    opacity: 0.7;
+}

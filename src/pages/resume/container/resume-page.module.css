@@ -1,0 +1,29 @@
+.page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.header {
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--accent-yellow);
+}
+
+.header h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 0.35rem;
+}
+
+.header p {
+    font-size: var(--font-size-sm);
+    opacity: 0.6;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}

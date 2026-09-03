@@ -5,12 +5,14 @@ import { routes } from "$utils/constants";
 import type { Route as AppRoute } from "$utils/types";
 
 const HomePage = lazy(() => import("./home"));
+const AboutPage = lazy(() => import("./about"));
 const ResumePage = lazy(() => import("./resume"));
 
 const RouteHash: Partial<
   Record<AppRoute, LazyExoticComponent<() => JSX.Element>>
 > = {
   "/": HomePage,
+  "/about": AboutPage,
   "/resume": ResumePage,
 };
 
