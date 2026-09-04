@@ -1,5 +1,5 @@
 import { lazy, Suspense, type LazyExoticComponent, type JSX } from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 import NavBar from "$components/nav-bar/nav-bar";
 import { routes } from "$utils/constants";
 import type { Route as AppRoute } from "$utils/types";
@@ -18,7 +18,7 @@ const RouteHash: Partial<
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <NavBar />
       <Suspense fallback={<div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "60vh", fontSize: "0.875rem", opacity: 0.6 }}>Loading...</div>}>
         <Routes>
@@ -29,7 +29,7 @@ const Router = () => {
           })}
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
