@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.scuffed {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.5rem 0 2.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.scuffed button {
+    align-self: flex-end;
+}
+
+.scuffed h2 {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+}
+
+.scuffed p {
+    font-size: var(--font-size-lg);
+    font-weight: 300;
+    margin-bottom: 1.75rem;
+    opacity: 0.7;
+}
+
+/* Section spacing */
+.container section:not(.scuffed) {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Skills: category blocks with subtle separation */
+.container section[id="skills"] > div {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 10%, transparent);
+}
+
+.container section[id="skills"] > div:last-child {
+    border-bottom: none;
+}
+
+.container section[id="skills"] h3 {
+    margin-bottom: 0.75rem;
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.container section h4 {
+    border-bottom-color: var(--accent-yellow);
+    border-bottom-width: 2px;
+}
+
+.container section[id="skills"] ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Projects: clean stacked list with hairline dividers */
+.container section[id="projects"] ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.container section[id="projects"] ul li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 12%, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.container section[id="projects"] ul li:last-child {
+    border-bottom: none;
+}
+
+.container section[id="projects"] h5 {
+    font-size: var(--font-size-lg);
+}
+
+@media (min-width: 640px) {
+    .scuffed {
+        padding: 5rem 0 3rem;
+    }
+}
